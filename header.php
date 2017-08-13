@@ -19,21 +19,21 @@
 
 	<?php wp_head(); ?>
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	    <![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
-	<!-- preloader start -->
-	<div id="preloader">
-	  <div id="status"></div>
+	<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<!--  THEME PRELOADER AREA -->
+	<div id="preloader-wrapper">
+			<div class="preloader-wave-effect"></div>
 	</div>
-	<!-- preloader end --> 
-<div id="page" class="site">
+	<!-- THEME PRELOADER AREA END -->
+
+	<div class="wrapper">
+		<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'civitas' ); ?></a>
 
 	<header id="masthead" class="site-header">
