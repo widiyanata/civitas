@@ -124,6 +124,15 @@ add_action( 'widgets_init', 'civitas_widgets_init' );
 function civitas_scripts() {
 	wp_enqueue_style( 'civitas-style', get_stylesheet_uri() );
 
+  // Add css style
+  wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
+  wp_enqueue_style('ionicon', get_template_directory_uri() . '/css/ionicons.min.css');
+  wp_enqueue_style('animate', get_template_directory_uri() . '/css/animate.css');
+  wp_enqueue_style('owl-carousel', get_template_directory_uri() . '/css/owl.carousel.css');
+  wp_enqueue_style('owl-transition', get_template_directory_uri() . '/css/owl.transitions.css');
+  wp_enqueue_style('magnific-popup', get_template_directory_uri() . '/css/magnific-popup.css');
+
+
 	wp_enqueue_script( 'civitas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'civitas-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
