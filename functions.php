@@ -127,21 +127,23 @@ function civitas_scripts() {
   // Add css style
   wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
   wp_enqueue_style('core-style', get_template_directory_uri() . '/css/core.css');
-  wp_enqueue_style('animate', get_template_directory_uri() . '/css/animate.css');
+  wp_enqueue_style('animate', get_template_directory_uri() . '/css/shortcode/shortcodes.css');
   wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css');
   wp_enqueue_style('responsive', get_template_directory_uri() . '/css/responsive.css');
   wp_enqueue_style('custom-style', get_template_directory_uri() . '/css/custom.css');
 
 
-	wp_enqueue_script( 'civitas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
   // Add script to footer
-  wp_enqueue_script( 'civitas-jquery', get_template_directory_uri() . '/js/vendor/jquery-1.12.1.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-jquery-script', get_template_directory_uri() . '/js/vendor/jquery-1.12.1.min.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-bootsnav', get_template_directory_uri() . '/js/bootsnav.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-main-js', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-modernizr-js', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', array(), '20151215', true );
 
+  wp_enqueue_script( 'civitas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'civitas-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
