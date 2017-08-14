@@ -893,3 +893,8 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+#articles .zm-post-thumb img {
+    max-height: 200px;
+    min-height: 200px;
+}

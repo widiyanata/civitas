@@ -135,13 +135,15 @@ function civitas_scripts() {
 
 
   // Add script to footer
-  wp_enqueue_script( 'civitas-jquery-script', get_template_directory_uri() . '/js/vendor/jquery-1.12.1.min.js', array(), '20151215', true );
+  // wp_enqueue_script( 'civitas-jquery-script', "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js", array(), '1.2', true );
   wp_enqueue_script( 'civitas-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-bootsnav', get_template_directory_uri() . '/js/bootsnav.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-main-js', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
   wp_enqueue_script( 'civitas-modernizr-js', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', array(), '20151215', true );
+	// wp_enqueue_script( 'civitas-masonry-js', "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js", array(), '20151215', true );
+
 
   wp_enqueue_script( 'civitas-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'civitas-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

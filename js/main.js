@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Zmagazine - HTML Magazine Template for Blogging and News Sites. 
+    Template Name: Zmagazine - HTML Magazine Template for Blogging and News Sites.
     Template URI: https://themeforest.net/user/nilartstudio
     Description: Zmagazine is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
     Author: Nilartstudio
@@ -15,7 +15,7 @@
 	01. jQuery MeanMenu
 	02. Selectpicker
 	03. Datepicker
-	04. wow js 
+	04. wow js
     05. ScrollUp jquery
     06. Tooltip
     07. Ticker
@@ -38,7 +38,7 @@
     23. Cart plus minus button
     24. lazyload
 
- 
+
 ======================================
 [ End table content ]
 ======================================*/
@@ -61,7 +61,7 @@
         02. Selectpicker
     --------------------------------------------- */
     $('.selectpicker').selectpicker();
-    
+
     /*-------------------------------------------
         03. Datepicker
     --------------------------------------------- */
@@ -70,7 +70,7 @@
         startDate: '-3d'
     });
     /*-------------------------------------------
-        04. wow js 
+        04. wow js
     --------------------------------------------- */
     new WOW().init();
 
@@ -92,10 +92,10 @@
     /*-------------------------------------------
         07. Ticker
     --------------------------------------------- */
-    $('#bkn').ticker({ 
+    $('#bkn').ticker({
         effect: 'fadeIn',
         interval: 3000,
-        controls: false, 
+        controls: false,
         duration: 400
     });
 
@@ -299,7 +299,7 @@
       });
 
     /*-------------------------------------------
-        14. owl carosel trending post img 
+        14. owl carosel trending post img
     --------------------------------------------- */
     var owl = $('.owl-trending');
     owl.owlCarousel({
@@ -508,5 +508,10 @@
         24. lazyload
     --------------------------------------------- */
     //$("img").lazyload();
+
+    // $('#articles').masonry({
+    //   itemSelector: '.item',
+    //   columnWidth: 200
+    // })
 
 })(jQuery);

@@ -1,3 +1,4 @@
+<?php if ( is_home() ) : ?>
 <!-- Start trending post area -->
 <div class="trending-post-area">
   <div class="container-fluid">
@@ -107,3 +108,6 @@
   </div>
 </div>
 <!-- End trending post area -->
+<?php else: ?>
+
+<?php endif; ?>
