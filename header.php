@@ -115,7 +115,7 @@
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+                        <!-- <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li> -->
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -130,70 +130,24 @@
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar-menu">
-                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
+                <?php
 
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Dropdowns</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Custom Menu</a></li>
-                                <li><a href="#">Custom Menu</a></li>
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#">Custom Menu</a></li>
-                                        <li><a href="#">Custom Menu</a></li>
-                                        <li class="dropdown">
-                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Sub Menu</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Custom Menu</a></li>
-                                                <li><a href="#">Custom Menu</a></li>
-                                                <li><a href="#">Custom Menu</a></li>
-                                                <li><a href="#">Custom Menu</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Custom Menu</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Custom Menu</a></li>
-                                <li><a href="#">Custom Menu</a></li>
-                                <li><a href="#">Custom Menu</a></li>
-                                <li><a href="#">Custom Menu</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </div><!-- /.navbar-collapse -->
+                   wp_nav_menu( array(
+                       'menu'              => 'menu-1',
+                       'theme_location'    => 'primary',
+                       'depth'             => 2,
+                       'container'         => 'div',
+                       'container_class'   => 'collapse navbar-collapse ',
+                        'container_id'      => 'navbar-menu',
+                       'menu_class'        => 'nav navbar-nav navbar-right',
+                       'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                       'walker'            => new wp_bootstrap_navwalker()
+                       )
+                   );
+                       ?>
+
             </div>
 
-            <!-- Start Side Menu -->
-            <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <div class="widget">
-                    <h6 class="title">Custom Pages</h6>
-                    <ul class="link">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="widget">
-                    <h6 class="title">Additional Links</h6>
-                    <ul class="link">
-                        <li><a href="#">Retina Homepage</a></li>
-                        <li><a href="#">New Page Examples</a></li>
-                        <li><a href="#">Parallax Sections</a></li>
-                        <li><a href="#">Shortcode Central</a></li>
-                        <li><a href="#">Ultimate Font Collection</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- End Side Menu -->
         </nav>
         <div class="header-middle-area">
           <div class="container">
@@ -258,10 +212,27 @@
                     <h6 class="uppercase">BREAKING NEWS</h6>
                   </div>
                   <div class="news-wrap">
-                    <ul class="bkn clearfix" id="bkn">
-                      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | Ut enim ad minim ut labre et dolore qui magna mini.</li>
-                      <li>Nilartstudio dolor amet, consectetur adipisicing elit. | Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. | Ut enim ad minim ut labre et dolore qui magna mini.</li>
-                    </ul>
+                    <?php
+                      $args = array(
+                        'post_per_page' => 3,
+                      );
+                      // The Query
+                      $the_query = new WP_Query( $args );
+
+                      // The Loop
+                      if ( $the_query->have_posts() ) {
+                      	echo '<ul  class="bkn clearfix" id="bkn">';
+                      	while ( $the_query->have_posts() ) {
+                      		$the_query->the_post();
+                      		echo '<li><a href="'.get_the_permalink().'" >' . get_the_title() . '</a></li>';
+                      	}
+                      	echo '</ul>';
+                      	/* Restore original Post Data */
+                      	wp_reset_postdata();
+                      } else {
+                      	// no posts found
+                      }
+                     ?>
                   </div>
                 </div>
               </div>
@@ -280,10 +251,10 @@
           <nav id="site-navigation" class="main-navigation">
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'civitas' ); ?></button>
             <?php
-      				wp_nav_menu( array(
-      					'theme_location' => 'menu-1',
-      					'menu_id'        => 'primary-menu',
-      				) );
+      				// wp_nav_menu( array(
+      				// 	'theme_location' => 'menu-1',
+      				// 	'menu_id'        => 'primary-menu',
+      				// ) );
       			?>
           </nav>
           <!-- #site-navigation -->

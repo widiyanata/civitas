@@ -11,22 +11,6 @@
 
 ?>
 
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'civitas' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'civitas' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'civitas' ), 'civitas', '<a href="https://automattic.com/">Widiyanata</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-
-
 <!-- Start footer area -->
 <footer id="footer" class="footer-wrapper footer-1">
 		<!-- Start footer top area -->
@@ -100,7 +84,17 @@
 						<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
 										<div class="zm-copyright">
-												<p class="uppercase">&copy; 2016 Your Company. All Rights Reserved.</p>
+											<div class="site-info">
+												<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'civitas' ) ); ?>"><?php
+													/* translators: %s: CMS name, i.e. WordPress. */
+													printf( esc_html__( 'Proudly powered by %s', 'civitas' ), 'WordPress' );
+												?></a>
+												<span class="sep"> | </span>
+												<?php
+													/* translators: 1: Theme name, 2: Theme author. */
+													printf( esc_html__( 'Theme: %1$s by %2$s.', 'civitas' ), 'civitas', '<a href="https://automattic.com/">Widiyanata</a>' );
+												?>
+											</div><!-- .site-info -->
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 text-right hidden-xs">

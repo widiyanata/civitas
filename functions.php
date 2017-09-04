@@ -12,6 +12,11 @@
  	*/
 	include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
 
+	/**
+	* Include Bootstrap navwalker
+	*/
+	require_once('/inc/wp_bootstrap_navwalker-old.php' );
+
 if ( ! function_exists( 'civitas_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -50,6 +55,8 @@ if ( ! function_exists( 'civitas_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'civitas' ),
+			'primary' => esc_html__('Main Top Menu', 'civitas'),
+			'secondary' => esc_html__('Top Menu', 'civitas'),
 		) );
 
 		/*

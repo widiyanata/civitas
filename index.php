@@ -19,8 +19,12 @@ get_header(); ?>
 		<div class="zm-section bg-white ptb-70">
 			<div class="container">
 				<div class="row">
+
+
+
 					<!-- Start left side -->
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 columns">
+            <?php get_template_part('section/trending', 'slider') ?>
 						<div class="row mb-40">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="section-title">
