@@ -246,7 +246,7 @@
         <a class="skip-link screen-reader-text" href="#content">
           <?php esc_html_e( 'Skip to content', 'civitas' ); ?>
         </a>
-
+        <!-- Original Header -->
         <header id="masthead" class="site-header sr-only">
           <nav id="site-navigation" class="main-navigation">
             <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'civitas' ); ?></button>
@@ -261,4 +261,5 @@
         </header>
         <!-- #masthead -->
 
-        <?php get_template_part('section/trending') ?>
+        <!-- Get Trending Post Slider, after breaking news.  -->
+        <?php //get_template_part('section/trending', 'slider') ?>

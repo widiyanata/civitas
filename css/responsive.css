@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Zmagazine - HTML Magazine Template for Blogging and News Sites. 
+    Template Name: Zmagazine - HTML Magazine Template for Blogging and News Sites.
     Template URI: https://themeforest.net/user/nilartstudio
     Description: Zmagazine is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
     Author: Nilartstudio
@@ -16,14 +16,14 @@
 /* Normal desktop :1920px. */
 @media all and (min-width: 1400px) {
   .container{
-    width: 1370px; 
+    width: 1370px;
   }
 }
 
 /* Normal desktop :1920px. */
 @media all and (min-width: 1366px) {
   .container{
-    width: 1350px; 
+    /*width: 1350px; */
     /*add 20 px*/
   }
 }
@@ -210,7 +210,7 @@
 
 }
 
- 
+
 /* Tablet desktop :768px. */
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -293,7 +293,7 @@
   margin-top: 0px;
 }
 .trend-post-list {
-  background: #fff; 
+  background: #fff;
 }
 .zm-post-lay-a4-area.md-mt-50{
   margin-top:0px;
@@ -322,11 +322,11 @@
 
 }
 
- 
+
 /* small mobile :320px. */
 @media (max-width: 767px) {
 .container {width:300px}
- 
+
 
 .header-top-right.text-right {
   margin-top: 0;
@@ -592,7 +592,7 @@
   width:100%;
 }
 .zm-post-lay-a2 .zm-post-meta {
-  margin-top: 0px; 
+  margin-top: 0px;
 }
 .archive-filter .sing-option + .sing-option {
   padding-left: 0px;
@@ -635,7 +635,7 @@
 
 
 }
- 
+
 /* Large Mobile :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .container {width:450px}
@@ -667,4 +667,3 @@
 }
 
 }
- 

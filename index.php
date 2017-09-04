@@ -15,12 +15,10 @@
 get_header(); ?>
 
   <section id="page-content" class="page-wrapper">
-		<!-- Start world news [layout A1+E+A]  -->
-		<div class="zm-section bg-white ptb-70">
+		<!-- Start  news  -->
+		<div class="zm-section bg-white pb-70">
 			<div class="container">
 				<div class="row">
-
-
 
 					<!-- Start left side -->
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 columns">
@@ -81,26 +79,13 @@ get_header(); ?>
         					<div class="row">
         						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                       <?php the_posts_pagination(); ?>
-        							<!-- <nav class="zm-pagination ptb-40 text-center">
-        								<ul class="page-numbers">
-        									<li><a class="prev page-numbers" href="#">Previous</a></li>
-        									<li><span class="page-numbers current">1</span></li>
-        									<li><a class="page-numbers" href="#">2</a></li>
-        									<li><a class="page-numbers" href="#">3</a></li>
-        									<li><a class="page-numbers" href="#">4</a></li>
-        									<li><a class="page-numbers" href="#">5</a></li>
-        									<li><span class="page-numbers zm-pgi-dots">...</span></li>
-        									<li><a class="page-numbers" href="#">15</a></li>
-        									<li><a class="next page-numbers" href="#">Next</a></li>
-        								</ul>
-        							</nav> -->
         						</div>
         					</div>
         				</div>
         			</div>
         		</div>
         		<!-- End pagination area -->
-						<!-- Start Advertisement -->
+						<!-- Start Advertisement : Still Static -->
 						<div class="advertisement">
 							<div class="row mt-40">
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
@@ -119,13 +104,8 @@ get_header(); ?>
 				</div>
 			</div>
 		</div>
-		<!-- End world news [layout A1+E+A]  -->
-
-
-
-
+		<!-- End news  -->
   </section>
 
   <?php
-// get_sidebar();
 get_footer();

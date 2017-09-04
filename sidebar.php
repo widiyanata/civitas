@@ -25,6 +25,12 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 </div> -->
 <!-- End Subscribe From -->
 
+
+<aside id="secondary" class="widget-area">
+	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+</aside><!-- #secondary -->
+
+
 <aside class="zm-tagcloud-list col-md-6 col-sm-6 col-lg-12 hidden-sm mt-70">
 	<div class="row mb-40">
 		<div class="col-md-12">
@@ -57,7 +63,6 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</div>
 	</div>
 </aside>
-<!-- Start post layout E -->
 <aside class="zm-post-lay-e-area col-md-6 col-sm-6 col-lg-12 mt-60 hidden-md">
 	<div class="row mb-40">
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -199,7 +204,3 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		</div>
 	</div>
 </aside>
-<!-- End post layout E -->
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
