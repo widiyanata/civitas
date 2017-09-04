@@ -16,7 +16,7 @@ get_header(); ?>
 
   <section id="page-content" class="page-wrapper">
 		<!-- Start  news  -->
-		<div class="zm-section bg-white pb-70">
+		<div class="zm-section bg-white ptb-70">
 			<div class="container">
 				<div class="row">
 

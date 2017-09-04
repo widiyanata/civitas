@@ -38,7 +38,7 @@ if ( is_home() ) : ?>
               <?php if ( !empty($thumb[0]) ) :  ?>
                 <?php echo $thumb[0]; ?>
               <?php else: ?>
-                <img src="http://placehold.it/300x200" alt="img">
+                <img src="http://placehold.it/600x400" alt="img">
               <?php endif ?>
             </div>
             <div class="zm-post-dis text-white">
@@ -57,7 +57,7 @@ if ( is_home() ) : ?>
         </div>
         <!-- End single trend post -->
         <!-- Start single trend post -->
-        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 trending">
           <div class="row">
             <div class="col-md-12 col-sm-6 col-lg-12 col-xs-12 p-0">
               <article class="zm-trending-post zm-lay-c zm-single-post" data-dark-overlay="2.5" data-scrim-bottom="9" data-effict-zoom="1">
@@ -109,7 +109,7 @@ if ( is_home() ) : ?>
         </div>
         <!-- End single trend post -->
         <!-- Start single trend post -->
-        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12">
+        <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12 trending">
           <div class="row">
             <div class="col-md-12 col-sm-6 col-lg-12 col-xs-12 p-0">
               <article class="zm-trending-post zm-lay-c zm-single-post" data-dark-overlay="2.5" data-scrim-bottom="9" data-effict-zoom="1">

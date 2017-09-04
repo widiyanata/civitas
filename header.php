@@ -264,4 +264,4 @@
         <!-- #masthead -->
 
         <!-- Get Trending Post Slider, after breaking news.  -->
-        <?php //get_template_part('section/trending', 'slider') ?>
+        <?php get_template_part('section/trending') ?>

@@ -894,6 +894,11 @@ object {
 	display: block;
 }
 
+/* display none category button*/
+.cat-btn {
+	display: none;
+}
+
 /* News Section, Home */
 #articles .zm-post-thumb img {
     max-height: 200px;
@@ -902,7 +907,12 @@ object {
 
 /* Owl Slider */
 .trending-post-area .zm-post-thumb img {
-	max-height: 500px;
+	max-height: 400px;
+}
+
+/* Trending Post Widget */
+.trending .zm-post-thumb img {
+	max-height: 200px;
 }
 
 /* Sidebar Widget */
