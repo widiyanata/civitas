@@ -51,6 +51,7 @@ if ( $query->have_posts() ) { ?>
   wp_reset_postdata();
 } else {
   // no posts found
+  get_template_part( 'template-parts/content', 'none' );
 }
 
  ?>

@@ -18,6 +18,7 @@
 		<!-- Start footer top area -->
 		<div class="footer-top-wrap ptb-70 bg-dark">
 				<div class="container">
+					<!-- Widget Footer 4 Column -->
 						<div class="row">
 								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
 										<div class="pr-40">
