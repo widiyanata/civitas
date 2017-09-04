@@ -48,13 +48,15 @@
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7  hidden-xs">
                 <div class="header-top-left">
                   <nav class="header-top-menu zm-secondary-menu">
-                    <ul>
-                      <li><a href="#">Home</a></li>
-                      <li><a href="#">Feature</a></li>
-                      <li><a href="#">Shortcodes</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Contact</a></li>
-                    </ul>
+                    <?php
+                    // Header Top Menu
+                      wp_nav_menu(
+                        array(
+                          'menu' => 'top-footer',
+                          'theme_location' => 'top-menu',
+                        )
+                      );
+                     ?>
                   </nav>
                 </div>
               </div>
