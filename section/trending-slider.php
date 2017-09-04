@@ -32,11 +32,11 @@ if ( $query->have_posts() ) { ?>
         </div>
         <div class="zm-post-dis text-white">
             <!-- <div class="zm-category"><a href="#" class="bg-cat-2 cat-btn">Nature</a></div> -->
-            <h2 class="zm-post-title"><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
+            <h2 class="zm-post-title"><a href="<?php  the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <div class="zm-post-meta">
                 <ul>
                     <li class="s-meta"><a href="<?php echo the_author_link(); ?>" class="zm-author"><?php echo the_author_nickname(); ?></a></li>
-                    <li class="s-meta"><a href="#" class="zm-date"><?php echo the_date() ?></a></li>
+                    <li class="s-meta"><a href="<?php  ?>" class="zm-date"><?php echo the_date() ?></a></li>
                 </ul>
             </div>
         </div>
