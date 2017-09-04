@@ -56,7 +56,8 @@ if ( ! function_exists( 'civitas_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'civitas' ),
 			'primary' => esc_html__('Main Top Menu', 'civitas'),
-			'secondary' => esc_html__('Top Menu', 'civitas'),
+			'top-menu' => esc_html__('Top Menu', 'civitas'),
+			'menu-footer' => esc_html__('Footer Menu', 'civitas'),
 		) );
 
 		/*
@@ -124,42 +125,42 @@ function civitas_widgets_init() {
 	) );
 
 	// Register new Widget : Footer 4 column
-	register_sidebar( array(
-		'name'          => esc_html__( 'First Widget Footer', 'civitas' ),
-		'id'            => 'widget_footer_first_column',
-		'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Second Widget Footer', 'civitas' ),
-		'id'            => 'widget_footer_second_column',
-		'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Third Widget Footer', 'civitas' ),
-		'id'            => 'widget_footer_third_column',
-		'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-		'name'          => esc_html__( 'Forth Widget Footer', 'civitas' ),
-		'id'            => 'widget_footer_forth_column',
-		'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'First Widget Footer', 'civitas' ),
+			'id'            => 'widget_footer_first_column',
+			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Second Widget Footer', 'civitas' ),
+			'id'            => 'widget_footer_second_column',
+			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Third Widget Footer', 'civitas' ),
+			'id'            => 'widget_footer_third_column',
+			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Forth Widget Footer', 'civitas' ),
+			'id'            => 'widget_footer_forth_column',
+			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
 }
 add_action( 'widgets_init', 'civitas_widgets_init' );
 

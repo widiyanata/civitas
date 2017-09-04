@@ -64,13 +64,15 @@
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 text-right hidden-xs">
 										<nav class="footer-menu zm-secondary-menu text-right">
-												<ul>
-														<li><a href="#">Home</a></li>
-														<li><a href="#">Feature</a></li>
-														<li><a href="#">Shortcodes</a></li>
-														<li><a href="#">About</a></li>
-														<li><a href="#">Contact</a></li>
-												</ul>
+											<?php
+											// Footer Menu
+												wp_nav_menu(
+													array(
+														'menu' => 'menu-footer',
+														'theme_location' => 'menu-footer',
+													)
+												);
+											 ?>
 										</nav>
 								</div>
 						</div>
