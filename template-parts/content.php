@@ -26,6 +26,14 @@
 		endif; ?>
 	</header><!-- .entry-header -->
 
+	<!-- Post thumbnail -->
+	<div class="zm-post-thumb">
+		<?php if(has_post_thumbnail() ) :
+			the_post_thumbnail();
+		endif; ?>
+	</div>
+
+
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(

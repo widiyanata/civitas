@@ -938,3 +938,21 @@ object {
 .widget_archive li a {
     color: #eee;
 }
+
+/* Post Single */
+
+/* Post navigation */
+.nav-previous, .nav-next {
+    padding: 10px 0;
+		margin-bottom: 20px;
+}
+
+.nav-previous {
+    border-left: 5px solid #f0442c;
+		padding-left: 10px;
+}
+
+.nav-next {
+    border-right: 5px solid #303030;
+    padding-right: 10px;
+}
