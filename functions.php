@@ -17,6 +17,17 @@
 	*/
 	require_once('/inc/wp_bootstrap_navwalker-old.php' );
 
+
+	/**
+	*	Register Custom Widget
+	*/
+	require_once('/inc/widget/widget-category.php');
+
+	function register_custom_widget() {
+		register_widget('Cat_Widget');
+	}
+	add_action( 'widgets_init', 'register_custom_widget' );
+
 if ( ! function_exists( 'civitas_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
