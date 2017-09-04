@@ -36,7 +36,7 @@ if ( $query->have_posts() ) { ?>
             <div class="zm-post-meta">
                 <ul>
                     <li class="s-meta"><a href="<?php echo the_author_link(); ?>" class="zm-author"><?php echo the_author_nickname(); ?></a></li>
-                    <li class="s-meta"><a href="<?php  ?>" class="zm-date"><?php echo the_date() ?></a></li>
+                    <li class="s-meta"><?php echo the_date() ?></li>
                 </ul>
             </div>
         </div>

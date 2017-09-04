@@ -14,6 +14,9 @@
       $link[] = get_the_permalink();
       $title[] = get_the_title();
       $thumb[] = get_the_post_thumbnail(get_the_ID(), 'small');
+      $date[] = get_the_date();
+      $author[] =  get_the_author();
+      $author_link[] = get_the_author_link();
     }
 
     /* Restore original Post Data */
@@ -48,8 +51,8 @@ if ( is_home() ) : ?>
               </h2>
               <div class="zm-post-meta">
                 <ul>
-                  <li class="s-meta"><a href="#" class="zm-author">Thomson Smith</a></li>
-                  <li class="s-meta"><a href="#" class="zm-date">April 18, 2016</a></li>
+                  <li class="s-meta"><a href="<?php echo $author_link[0]; ?>" class="zm-author"><?php echo $author[0]; ?></a></li>
+                  <li class="s-meta"><?php echo $date[0]; ?></li>
                 </ul>
               </div>
             </div>
@@ -73,8 +76,8 @@ if ( is_home() ) : ?>
                   <h2 class="zm-post-title"><a href="<?php echo $link[1]; ?>"><?php echo $title[1]; ?></a></h2>
                   <div class="zm-post-meta">
                     <ul>
-                      <li class="s-meta"><a href="#" class="zm-author">Thomson Smith</a></li>
-                      <li class="s-meta"><a href="#" class="zm-date">April 18, 2016</a></li>
+                      <li class="s-meta"><a href="<?php echo $author_link[1]; ?>" class="zm-author"><?php echo $author[1]; ?></a></li>
+                      <li class="s-meta"><?php echo $date[1]; ?></li>
                     </ul>
                   </div>
                 </div>
@@ -91,15 +94,11 @@ if ( is_home() ) : ?>
                 </div>
                 <div class="zm-post-dis text-white">
                   <div class="zm-category"><a href="#" class="bg-cat-5 cat-btn">Fashion</a></div>
-                  <h2 class="zm-post-title">
-                    <a href="<?php echo $link[2]; ?>">
-                      <?php echo $title[2]; ?>
-                    </a>
-                  </h2>
+                  <h2 class="zm-post-title"><a href="<?php echo $link[2]; ?>"><?php echo $title[2]; ?></a></h2>
                   <div class="zm-post-meta">
                     <ul>
-                      <li class="s-meta"><a href="#" class="zm-author">Thomson Smith</a></li>
-                      <li class="s-meta"><a href="#" class="zm-date">April 18, 2016</a></li>
+                      <li class="s-meta"><a href="<?php echo $author_link[2]; ?>" class="zm-author"><?php echo $author[2]; ?></a></li>
+                      <li class="s-meta"><?php echo $date[2]; ?></li>
                     </ul>
                   </div>
                 </div>
@@ -122,13 +121,11 @@ if ( is_home() ) : ?>
                 </div>
                 <div class="zm-post-dis text-white">
                   <div class="zm-category"><a href="#" class="bg-cat-2 cat-btn">Business</a></div>
-                  <h2 class="zm-post-title">
-                    <a href="<?php echo $link[3]; ?>"><?php echo $title[3]; ?></a>
-                  </h2>
+                  <h2 class="zm-post-title"><a href="<?php echo $link[3]; ?>"><?php echo $title[3]; ?></a></h2>
                   <div class="zm-post-meta">
                     <ul>
-                      <li class="s-meta"><a href="#" class="zm-author">Thomson Smith</a></li>
-                      <li class="s-meta"><a href="#" class="zm-date">April 18, 2016</a></li>
+                      <li class="s-meta"><a href="<?php echo $author_link[3]; ?>" class="zm-author"><?php echo $author[3]; ?></a></li>
+                      <li class="s-meta"><?php echo $date[3]; ?></li>
                     </ul>
                   </div>
                 </div>
@@ -145,13 +142,11 @@ if ( is_home() ) : ?>
                 </div>
                 <div class="zm-post-dis text-white">
                   <div class="zm-category"><a href="#" class="bg-cat-1 cat-btn">Animal</a></div>
-                  <h2 class="zm-post-title">
-                    <a href="<?php echo $link[4]; ?>"><?php echo $title[4]; ?></a>
-                  </h2>
+                  <h2 class="zm-post-title"><a href="<?php echo $link[4]; ?>"><?php echo $title[4]; ?></a></h2>
                   <div class="zm-post-meta">
                     <ul>
-                      <li class="s-meta"><a href="#" class="zm-author">Thomson Smith</a></li>
-                      <li class="s-meta"><a href="#" class="zm-date">April 18, 2016</a></li>
+                      <li class="s-meta"><a href="<?php echo $author_link[4]; ?>" class="zm-author"><?php echo $author[4]; ?></a></li>
+                      <li class="s-meta"><?php echo $date[4]; ?></li>
                     </ul>
                   </div>
                 </div>
