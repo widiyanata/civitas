@@ -5,9 +5,9 @@ class Cat_Widget extends WP_Widget {
     public function __construct(){
       parent::__construct(
         'cat_widget', // Base ID
-        esc_html__('Category Widget Title', 'hiji'), // Widget Name
+        esc_html__('Sidebar Widget Category', 'civitas'), // Widget Name
         array(
-          'description' => esc_html__('Widget description is here', 'hiji') // Args
+          'description' => esc_html__('Widget description is here', 'civitas') // Args
         )
       );
     }
