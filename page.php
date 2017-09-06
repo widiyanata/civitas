@@ -14,9 +14,12 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="page-content" class="page-wrapper">
+	<div class="zm-section single-post-wrap bg-white ptb-70 xs-pt-30">
+		<div class="container">
+			<div class="row">
 
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 columns">
 			<?php
 			while ( have_posts() ) : the_post();
 
@@ -29,10 +32,13 @@ get_header(); ?>
 
 			endwhile; // End of the loop.
 			?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div>
+		<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sidebar-warp columns">
+			<?php get_sidebar(); ?>
+		</div>
+		</div>
+		</div>
+		</div>
 
 <?php
-get_sidebar();
 get_footer();
