@@ -1,0 +1,15 @@
+/**
+* Widget Style
+*/
+
+/* Widget Category*/
+.widget-cat {
+
+}
+.widget-cat img {
+  width: 100%;
+}
+
+.widget-cat article {
+  margin-bottom: 10px;
+}

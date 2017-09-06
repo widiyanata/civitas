@@ -25,7 +25,7 @@ class Cat_Widget extends WP_Widget {
       if ( !empty( $instance['title']  ) ) {
         echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
       }
-      echo "<ul>";
+      echo "<div class='widget-cat'>";
 
       $section_postsnr = 3;
 
@@ -41,26 +41,36 @@ class Cat_Widget extends WP_Widget {
 
       // The Query
       $query_posts = new WP_Query( apply_filters( 'ac_widget_cats_2col_query_filter', $query_args ) );
-
-      if( $query_posts->have_posts()) : while ( $query_posts->have_posts() ) : $query_posts->the_post();
+      $i = 0;
+      if( $query_posts->have_posts()) :
+        while ( $query_posts->have_posts() ) :
+          $query_posts->the_post();
+          $i++;
+          if ( $i == 1 ) { $class = "col-md-12"; } else { $class = 'col-md-4'; }
       ?>
 
-        <li>
-          <a href="<?php the_permalink(); ?>">
-            <?php if ( has_post_thumbnail() ) {
-              the_post_thumbnail();
-            } else { ?>
-              <img src="http://placehold.it/300x200" alt="">
-            <?php } ?>
-            <p class="title"><?php the_title(); ?></p>
-          </a>
-        </li>
+        <article class="row">
+
+            <div class="<?php echo $class; ?>">
+              <?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail();
+              } else { ?>
+                <img src="http://placehold.it/300x200" alt="">
+              <?php } ?>
+            </div>
+            <div class="col-md-8">
+              <a href="<?php the_permalink(); ?>" class="title"><?php the_title("<h5>", "</h5>"); ?></a>
+              <?php the_category(); ?>
+            </div>
+
+        </article>
+
 
       <?php
         endwhile;
       endif;
 
-      echo "</ul>";
+      echo "</div>";
       echo $args['after_widget'];
     }
 
