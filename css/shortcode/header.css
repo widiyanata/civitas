@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------------
-Template Name: Zmagazine - HTML Magazine Template for Blogging and News Sites. 
+Template Name: Zmagazine - HTML Magazine Template for Blogging and News Sites.
 
 NOTE: This is Header style file. All Header related style included in this file.
 
@@ -160,6 +160,7 @@ nav.zm-secondary-menu ul li:last-child {
     height: 70px;
     margin-right: 15px;
     width: 140px;
+    border-bottom: 3px solid #d9412c;
 }
 .bn-title h6 {
     color: #3b5265;
