@@ -18,14 +18,14 @@
 	include_once( dirname( __FILE__ ) . '/inc/wp_bootstrap_navwalker-old.php' );
 
 	/**
-	*	Register Custom Widget
+	*	Include Custom Widget
 	*/
-	include_once( dirname( __FILE__ ) . '/inc/widget/widget-category.php' );
-
-	function register_custom_widget() {
-		register_widget('Cat_Widget');
-	}
-	add_action( 'widgets_init', 'register_custom_widget' );
+	include_once( dirname( __FILE__ ) . '/inc/widget/widget-init.php' );
+	//
+	// function register_custom_widget() {
+	// 	register_widget('Cat_Widget');
+	// }
+	// add_action( 'widgets_init', 'register_custom_widget' );
 
 if ( ! function_exists( 'civitas_setup' ) ) :
 	/**
