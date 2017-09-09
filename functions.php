@@ -15,13 +15,12 @@
 	/**
 	* Include Bootstrap navwalker
 	*/
-	require_once('/inc/wp_bootstrap_navwalker-old.php' );
-
+	include_once( dirname( __FILE__ ) . '/inc/wp_bootstrap_navwalker-old.php' );
 
 	/**
 	*	Register Custom Widget
 	*/
-	require_once('/inc/widget/widget-category.php');
+	include_once( dirname( __FILE__ ) . '/inc/widget/widget-category.php' );
 
 	function register_custom_widget() {
 		register_widget('Cat_Widget');
