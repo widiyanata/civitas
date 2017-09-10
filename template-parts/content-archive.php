@@ -12,7 +12,7 @@
 	<div class="row">
     <div class="col-md-4 col-lg-4">
       <!-- Post thumbnail -->
-      <div class="zm-post-thumb">
+      <div class="post-thumb">
         <?php if(has_post_thumbnail() ) :
           the_post_thumbnail();
         else: ?>

@@ -14,24 +14,24 @@
 
 
 /*Shop */
-.zm-product-title {
+.product-title {
     font-size: 18px;
     line-height: 36px;
     margin-top: 20px;
 }
-.zm-ratting ul li.yes i {
+.ratting ul li.yes i {
     color: #fab702;
 }
-.zm-ratting ul li i {
+.ratting ul li i {
     color: #cdcdcd;
 }
-.zm-ratting ul li {
+.ratting ul li {
     display: inline-block;
 }
-.zm-ratting ul li + li {
+.ratting ul li + li {
     margin-left: 6px;
 }
-.zm-ratting p {
+.ratting p {
     line-height: 15px;
 }
 .product-action {
@@ -106,28 +106,28 @@
 }
 
 /*new arrival product*/
-.two-row-product .zm-product-list .zm-single-product{
+.two-row-product .product-list .single-product{
   margin-bottom: 40px;
 }
 
 /*Single product*/
-.zm-sin-por-nav .zm-sin-pro {
+.sin-por-nav .sin-pro {
     float: left;
     width: 100%;
     padding: 0 5px;
 }
-.zm-sin-por-nav {
+.sin-por-nav {
   margin-top: 10px ;
 }
-.zm-single-product .tab-content div img {
+.single-product .tab-content div img {
   width: 100%;
 }
-.zm-sin-por-nav-mar{
+.sin-por-nav-mar{
   margin: auto -5px; 
 }
 
 
-.product-details .zm-product-title {
+.product-details .product-title {
     margin-top: -10px;
 }
 .product-details .price-box {
@@ -143,13 +143,13 @@
     font-weight: 400;
     text-decoration: line-through;
 }
-.product-details .zm-stock {
+.product-details .stock {
   font-size: 18px;
 }
 .price-box .price {
   padding: 0 5px;
 }
-.zm-pro-quantity span {
+.pro-quantity span {
   float: left;
   font-weight: 700;
   margin-right: 30px;
@@ -187,30 +187,30 @@
 .inc.qtybutton {
     bottom: 8px;
 }
-.zm-pro-quantity {
+.pro-quantity {
   margin-top: 40px;
 }
 
-.zm-single-info-nav {
+.single-info-nav {
     border-bottom: 1px solid #d3dce1;
     margin-bottom: 30px;
     padding-bottom: 12px;
 }
-.zm-single-info-nav li {
+.single-info-nav li {
     display: inline-block;
 }
-.zm-single-info-nav li a {
+.single-info-nav li a {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 }
-.zm-single-info-nav li + li {
+.single-info-nav li + li {
     margin-left: 42px;
 }
-.zm-single-info-nav li.active {
+.single-info-nav li.active {
     position: relative;
 }
-.zm-single-info-nav li.active::before {
+.single-info-nav li.active::before {
     background: #f0442c none repeat scroll 0 0;
     content: "";
     height: 1px;
@@ -227,10 +227,10 @@
   margin-top: 25px;
 }
 
-.zm-pro-question {
+.pro-question {
     font-weight: 700;
 }
-.zm-pro-ans {
+.pro-ans {
     margin-bottom: 10px;
 }
 
@@ -314,27 +314,27 @@
 
 /*cart page */
 
-.zm-table table tbody tr, .zm-table table tfoot tr {
+.table table tbody tr, .table table tfoot tr {
     border-bottom: medium none;
     border-top: 1px solid #e6e6e6;
     height: 60px;
 }
-.zm-table table thead {
+.table table thead {
     border-bottom: medium none;
 }
-.zm-table table thead tr {
+.table table thead tr {
     border-bottom: medium none;
 }
-.zm-table table thead tr th, .zm-table table tbody tr th , .zm-table table tfoot tr th {
+.table table thead tr th, .table table tbody tr th , .table table tfoot tr th {
     border-bottom: medium none;
     text-transform: uppercase;
 }
-.zm-table .table > thead > tr > th, .zm-table .table > tbody > tr > th, .zm-table .table > tfoot > tr > th, .zm-table .table > thead > tr > td, .zm-table .table > tbody > tr > td, .zm-table .table > tfoot > tr > td {
+.table .table > thead > tr > th, .table .table > tbody > tr > th, .table .table > tfoot > tr > th, .table .table > thead > tr > td, .table .table > tbody > tr > td, .table .table > tfoot > tr > td {
   border-top: 1px solid #e6e6e6;
   padding: 10px;
   vertical-align: middle;
 }
-.zm-table .table > thead > tr > th span, .zm-table .table > tbody > tr > th span, .zm-table .table > tfoot > tr > th span, .zm-table .table > thead > tr > td span, .zm-table .table > tbody > tr > td span, .zm-table .table > tfoot > tr > td span {
+.table .table > thead > tr > th span, .table .table > tbody > tr > th span, .table .table > tfoot > tr > th span, .table .table > thead > tr > td span, .table .table > tbody > tr > td span, .table .table > tfoot > tr > td span {
   font-weight: 400;
   padding-left: 10px;
 }

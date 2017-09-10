@@ -254,7 +254,7 @@
     /*-------------------------------------------
        12. owl carosel sin pro nav
     --------------------------------------------- */
-    var owl = $('.zm-sin-por-nav');
+    var owl = $('.sin-por-nav');
     owl.owlCarousel({
         items:5,
         loop:true,
@@ -293,8 +293,8 @@
     /*-------------------------------------------
         13. Change active
     --------------------------------------------- */
-      $('.zm-sin-por-nav .zm-sin-pro').on('click', function () {
-          $('.zm-sin-por-nav .zm-sin-pro').removeClass('is-select');
+      $('.sin-por-nav .sin-pro').on('click', function () {
+          $('.sin-por-nav .sin-pro').removeClass('is-select');
           $(this).addClass('is-select');
       });
 
@@ -452,7 +452,7 @@
     /*-------------------------------------------
         20. Treeview active
     --------------------------------------------- */
-    $('#zm-archive').treeview({
+    $('#archive').treeview({
         animated: "normal",
         persist: "location",
         collapsed: true,
@@ -475,7 +475,7 @@
     /*-------------------------------------------
         22. Custom scrollbar
     --------------------------------------------- */
-    $('.zm-scrollbar').mCustomScrollbar();
+    $('.scrollbar').mCustomScrollbar();
 
     /*-------------------------------------------
         23. Cart plus minus button

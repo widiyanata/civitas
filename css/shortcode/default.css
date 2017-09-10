@@ -429,9 +429,9 @@ body {
 .bg-gray span,
 .bg-gray ul,
 .bg-gray a:not(.cat-btn),
-.bg-gray h1:not(.zm-post-title) a,
-.bg-gray h2:not(.zm-post-title) a,
-.bg-gray h3:not(.zm-post-title) a, {
+.bg-gray h1:not(.post-title) a,
+.bg-gray h2:not(.post-title) a,
+.bg-gray h3:not(.post-title) a, {
   color: #7c8c99;
 }
 
@@ -486,9 +486,9 @@ body {
 .bg-dark ul,
 .bg-dark i,
 .bg-dark a:not(.btn),
-.bg-dark h1:not(.zm-post-title) a, 
-.bg-dark a:not(.zm-forget), 
-.bg-dark h2:not(.zm-post-title) a {
+.bg-dark h1:not(.post-title) a, 
+.bg-dark a:not(.forget), 
+.bg-dark h2:not(.post-title) a {
   color: #c1c1c1;
 }
 .bg-dark .text-white p,
@@ -520,9 +520,9 @@ body {
 .bg-black ul,
 .bg-black i,
 .bg-black a:not(.btn),
-.bg-black h1:not(.zm-post-title) a, 
-.bg-black h2:not(.zm-post-title) a, 
-.bg-black h3:not(.zm-post-title) a  {
+.bg-black h1:not(.post-title) a, 
+.bg-black h2:not(.post-title) a, 
+.bg-black h3:not(.post-title) a  {
   color: #c1c1c1;
 }
 .bg-black h1,
@@ -701,16 +701,16 @@ body {
 .text-white h1, .text-white p, .text-white h2, .text-white a{ 
   color: #fff; 
 }
-.bg-gray article:not(.zm-trending-post) .text-white h1, .bg-gray article:not(.zm-trending-post) .text-white p, .bg-gray article:not(.zm-trending-post) .text-white h2, .bg-gray article:not(.zm-trending-post) .text-white a, .bg-gray article:not(.zm-trending-post) .text-white li{
+.bg-gray article:not(.trending-post) .text-white h1, .bg-gray article:not(.trending-post) .text-white p, .bg-gray article:not(.trending-post) .text-white h2, .bg-gray article:not(.trending-post) .text-white a, .bg-gray article:not(.trending-post) .text-white li{
   color: #363636;
 }
-.bg-white article:not(.zm-trending-post) .text-white h1, .bg-white article:not(.zm-trending-post) .text-white p, .bg-white article:not(.zm-trending-post) .text-white h2, .bg-white article:not(.zm-trending-post) .text-white a, .bg-white article:not(.zm-trending-post) .text-white li{
+.bg-white article:not(.trending-post) .text-white h1, .bg-white article:not(.trending-post) .text-white p, .bg-white article:not(.trending-post) .text-white h2, .bg-white article:not(.trending-post) .text-white a, .bg-white article:not(.trending-post) .text-white li{
   color: #363636;
 }
 .bg-gray .text-white .s-meta::after, .bg-white .text-white .s-meta::after {
   color: #363636;
 }
-.bg-white .zm-trending-post .text-white .zm-post-title{ color: #fff; }
+.bg-white .trending-post .text-white .post-title{ color: #fff; }
 
 .text-white h1:hover, .text-white p:hover, .text-white h2:hover, .text-white a:not(.cat-btn):hover {
   color: #f0442c;
@@ -1000,11 +1000,11 @@ body {
     z-index: 1;
 }
 
-[data-dark-overlay].zm-post-dis, 
-[data-overlay] .zm-post-dis, 
-[data-overlay] .zm-post-dis, 
-[data-scrim-top] .zm-post-dis, 
-[data-scrim-buttom] .zm-post-dis {
+[data-dark-overlay].post-dis, 
+[data-overlay] .post-dis, 
+[data-overlay] .post-dis, 
+[data-scrim-top] .post-dis, 
+[data-scrim-buttom] .post-dis {
     z-index: 2;
 }
 

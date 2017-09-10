@@ -16,7 +16,7 @@ get_header(); ?>
 
   <section id="page-content" class="page-wrapper">
 		<!-- Start  news  -->
-		<div class="zm-section bg-white ptb-70">
+		<div class="section bg-white ptb-70">
 			<div class="container">
 				<div class="row">
 
@@ -31,15 +31,15 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="row">
-							<div class="zm-posts clearfix">
+							<div class="posts clearfix">
 								<div class="" id="articles">
 
                 <?php if (have_posts()) : ?>
 
                 	<?php while (have_posts()) : the_post(); ?>
                     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-    									<article class="zm-trending-post zm-lay-a1 zm-single-post" data-effict-zoom="1">
-    										<div class="zm-post-thumb">
+    									<article class="trending-post lay-a1 single-post" data-effict-zoom="1">
+    										<div class="post-thumb">
     											<a href="<?php the_permalink() ?>" data-dark-overlay="2.5" data-scrim-bottom="9">
                             <?php if ( has_post_thumbnail() ) :?>
                               <?php the_post_thumbnail(); ?>
@@ -48,11 +48,11 @@ get_header(); ?>
                             <?php endif; ?>
                           </a>
     										</div>
-    										<div class="zm-post-dis text-white">
-    											<h2 class="zm-post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    											<div class="zm-post-meta">
+    										<div class="post-dis text-white">
+    											<h2 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    											<div class="post-meta">
     												<ul>
-    													<li class="s-meta"><a href="#" class="zm-author"><?php the_author(); ?></a></li>
+    													<li class="s-meta"><a href="#" class="author"><?php the_author(); ?></a></li>
     												</ul>
     											</div>
     										</div>
@@ -74,7 +74,7 @@ get_header(); ?>
 						</div>
             <!-- Start pagination area -->
         		<div class="row">
-        			<div class="zm-pagination-wrap mt-30">
+        			<div class="pagination-wrap mt-30">
     						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                   <?php the_posts_pagination(); ?>
         				</div>

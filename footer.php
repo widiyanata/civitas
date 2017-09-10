@@ -49,7 +49,7 @@
 				<div class="container">
 						<div class="row">
 								<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-										<div class="zm-copyright">
+										<div class="copyright">
 											<div class="site-info">
 												<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'civitas' ) ); ?>"><?php
 													/* translators: %s: CMS name, i.e. WordPress. */
@@ -64,7 +64,7 @@
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 text-right hidden-xs">
-										<nav class="footer-menu zm-secondary-menu text-right">
+										<nav class="footer-menu secondary-menu text-right">
 											<?php
 											// Footer Menu
 												wp_nav_menu(

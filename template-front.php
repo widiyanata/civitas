@@ -16,7 +16,7 @@ get_header(); ?>
 
   <section id="page-content" class="page-wrapper">
 		<!-- Start world news [layout A1+E+A]  -->
-		<div class="zm-section bg-white ptb-70">
+		<div class="section bg-white ptb-70">
 			<div class="container">
 				<div class="row">
 					<!-- Start left side -->
@@ -29,18 +29,18 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="row">
-							<div class="zm-posts clearfix">
+							<div class="posts clearfix">
 								<!-- Start single post layout B -->
 								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-4">
-									<article class="zm-trending-post zm-lay-a1 zm-single-post" data-effict-zoom="1">
-										<div class="zm-post-thumb">
+									<article class="trending-post lay-a1 single-post" data-effict-zoom="1">
+										<div class="post-thumb">
 											<a href="#" data-dark-overlay="2.5" data-scrim-bottom="9"><img src="http://placehold.it/200x200" alt="img"></a>
 										</div>
-										<div class="zm-post-dis text-white">
-											<h2 class="zm-post-title h3"><a href="#">Exercitation ullamco aute laboris nisi... </a></h2>
-											<div class="zm-post-meta">
+										<div class="post-dis text-white">
+											<h2 class="post-title h3"><a href="#">Exercitation ullamco aute laboris nisi... </a></h2>
+											<div class="post-meta">
 												<ul>
-													<li class="s-meta"><a href="#" class="zm-author">Thomson Smith</a></li>
+													<li class="s-meta"><a href="#" class="author">Thomson Smith</a></li>
 												</ul>
 											</div>
 										</div>
@@ -105,11 +105,11 @@ get_header(); ?>
 
 		<!-- Start pagination area -->
 		<div class="row hidden-xs">
-			<div class="zm-pagination-wrap mt-30">
+			<div class="pagination-wrap mt-30">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<nav class="zm-pagination ptb-40 text-center">
+							<nav class="pagination ptb-40 text-center">
 								<ul class="page-numbers">
 									<li><a class="prev page-numbers" href="#">Previous</a></li>
 									<li><span class="page-numbers current">1</span></li>
@@ -117,7 +117,7 @@ get_header(); ?>
 									<li><a class="page-numbers" href="#">3</a></li>
 									<li><a class="page-numbers" href="#">4</a></li>
 									<li><a class="page-numbers" href="#">5</a></li>
-									<li><span class="page-numbers zm-pgi-dots">...</span></li>
+									<li><span class="page-numbers pgi-dots">...</span></li>
 									<li><a class="page-numbers" href="#">15</a></li>
 									<li><a class="next page-numbers" href="#">Next</a></li>
 								</ul>

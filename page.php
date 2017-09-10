@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <div id="page-content" class="page-wrapper">
-	<div class="zm-section single-post-wrap bg-white ptb-70 xs-pt-30">
+	<div class="section single-post-wrap bg-white ptb-70 xs-pt-30">
 		<div class="container">
 			<div class="row">
 

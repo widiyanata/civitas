@@ -10,21 +10,21 @@ NOTE: This is Header style file. All Header related style included in this file.
 
 
 /*Header top menu*/
-nav.zm-secondary-menu ul li {
+nav.secondary-menu ul li {
     display: inline-block;
     padding: 0 20px;
 }
-.zm-secondary-menu ul li a {
+.secondary-menu ul li a {
     font-size: 12px;
     text-transform: uppercase;
 }
-.zm-secondary-menu ul li a:hover {
+.secondary-menu ul li a:hover {
     color: #f0442c;
 }
-nav.zm-secondary-menu ul li:first-child {
+nav.secondary-menu ul li:first-child {
     padding-left: 0;
 }
-nav.zm-secondary-menu ul li:last-child {
+nav.secondary-menu ul li:last-child {
     padding-right: 0;
 }
 .header-top-right .topbar-sblock {
@@ -66,6 +66,9 @@ nav.zm-secondary-menu ul li:last-child {
 }
 
 /*Header middle*/
+.header-middle-area {
+    background-color: #f5f5f5;
+}
 .header-mdh{
     height: 150px;
 }
@@ -192,7 +195,7 @@ nav.zm-secondary-menu ul li:last-child {
     display: none;
     box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.15);
 }
-.zm-form-control {
+.form-control {
     border: medium none;
     display: block;
     height: 40px;
@@ -200,14 +203,14 @@ nav.zm-secondary-menu ul li:last-child {
     text-align: left;
     width: 100%;
 }
-.zm-form-control:focus {
+.form-control:focus {
     border: medium none;
 }
-.zm-form-control.password{
+.form-control.password{
     border-top: 1px solid #cfdadf;
 }
 
-.zm-submit-box input[type="submit"] {
+.submit-box input[type="submit"] {
     background: transparent none repeat scroll 0 0;
     border: 1px solid #cfdadf;
     float: left;
@@ -218,28 +221,28 @@ nav.zm-secondary-menu ul li:last-child {
     text-transform: uppercase;
     width: 47%;
 }
-.zm-submit-box {
+.submit-box {
     text-align: left;
 }
-.zm-submit-box input + input {
+.submit-box input + input {
     margin-left: 6%;
 }
-.zm-submit-box input[type="submit"]:hover {
+.submit-box input[type="submit"]:hover {
     background: #f0442c none repeat scroll 0 0;
     border-color: #f0442c;
     color: #fff;
 }
-.zm-login-social-box .social-btn{
+.login-social-box .social-btn{
     height: 30px;
     display: block;
     line-height: 30px;
     width: 100%;
     padding: 0;
 }
-.zm-login-social-box .social-btn + .social-btn {
+.login-social-box .social-btn + .social-btn {
     margin-top: 10px;
 }
-.zm-login-social-box .social-btn i {
+.login-social-box .social-btn i {
     color: #fff;
     height: 30px;
     line-height: 30px;
@@ -248,7 +251,7 @@ nav.zm-secondary-menu ul li:last-child {
     text-align: center;
     width: 37px;
 }
-.zm-login-social-box .social-btn i::after {
+.login-social-box .social-btn i::after {
     background: rgba(255, 255, 255, 0.2) none repeat scroll 0 0;
     content: "";
     height: 80%;
@@ -266,11 +269,11 @@ nav.zm-secondary-menu ul li:last-child {
 .login-btn:hover{
     color: #f0442c;
 }
-.zm-forget{
+.forget{
     margin: 15px 0;
     display: block;
 }
-.bg-dark .zm-signin-form .zm-forget, .bg-white .zm-signin-form .zm-forget, .bg-gray .zm-signin-form .zm-forget{
+.bg-dark .signin-form .forget, .bg-white .signin-form .forget, .bg-gray .signin-form .forget{
     color: #f0442c;
 }
 
@@ -390,17 +393,17 @@ box-shadow: 1px 9px 23px -3px rgba(0,0,0,0.54);
 /*.mega-menu-area {
     display: flex;
 }*/
-.zm-megamenu-sub-cats {
+.megamenu-sub-cats {
   float: left;
   padding-left: 40px;
   width: 18%;
 }
-.zm-megamenu-content {
+.megamenu-content {
   float: left;
   padding: 40px;
   width: 82%;
 }
-.mega-menu-area .zm-megamenu-sub-tab li a {
+.mega-menu-area .megamenu-sub-tab li a {
     color: #336666;
     display: block;
     font-size: 15px;
@@ -408,26 +411,26 @@ box-shadow: 1px 9px 23px -3px rgba(0,0,0,0.54);
     line-height: 50px;
     text-transform: capitalize;
 }
-.mega-menu-area .zm-megamenu-sub-tab li.active a, .zm-megamenu-sub-tab li a:hover {
+.mega-menu-area .megamenu-sub-tab li.active a, .megamenu-sub-tab li a:hover {
     color: #ff3333;
 }
-.zm-megamenu-sub-tab li + li a {
+.megamenu-sub-tab li + li a {
     border-top: 1px solid #ccc;
 }
-.zm-megamenu-sub-tab {
+.megamenu-sub-tab {
     border-right: 1px solid #ccc;
 }
-.zm-megamenu-sub-tab {
+.megamenu-sub-tab {
     padding: 30px 0 50px 0;
 }
 .mega-caro-wrap {
   display: flex;
   flex-flow: row wrap;
 }
-.zm-posts .zm-mega-post.zm-post-lay-a2 .zm-post-title {
+.posts .mega-post.post-lay-a2 .post-title {
   text-transform: none;
 }
-.zm-posts .zm-mega-post.zm-post-lay-a2 .zm-post-header {
+.posts .mega-post.post-lay-a2 .post-header {
   padding: 12px 0 0;
 }
 .mega-caro-wrap {
@@ -476,7 +479,7 @@ box-shadow: 1px 9px 23px -3px rgba(0,0,0,0.54);
 .mega-caro-wrap.owl-theme .owl-controls .owl-nav [class*="owl-"]:hover span {
   color: #fff;
 }
-.zm-megamenu-content .tab-content>.tab-pane{
+.megamenu-content .tab-content>.tab-pane{
   display: block;
   height: 0;
 }

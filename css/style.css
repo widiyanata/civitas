@@ -170,10 +170,10 @@ label {
 /*----------------------------------------*/
 /*  5. Subcribe form area
 /*----------------------------------------*/
-.subscribe-form.bg-dark .zm-post-title {
+.subscribe-form.bg-dark .post-title {
     color: #fff;
 }
-.subscribe-form .zm-post-title {
+.subscribe-form .post-title {
     line-height: 21px;
 }
 .subscribe-form.sidebar {
@@ -247,7 +247,7 @@ label {
 /*----------------------------------------*/
 /*  6. Tag Cloud
 /*----------------------------------------*/
-.zm-tagcloud a {
+.tagcloud a {
     background: #ecf3f6 none repeat scroll 0 0;
     color: #3b5265;
     display: inline-block;
@@ -257,21 +257,21 @@ label {
     padding: 1px 10px;
     text-transform: uppercase;
 }
-.zm-tagcloud a:hover {
+.tagcloud a:hover {
     background: #f0442c none repeat scroll 0 0;
     color: #fff;
 }
 /*----------------------------------------*/
 /*  7. Pagination
 /*----------------------------------------*/
-.zm-pagination {
+.pagination {
     border-bottom: 1px solid #e6e6e6;
     border-top: 1px solid #e6e6e6;
 }
-.zm-pagination .page-numbers li {
+.pagination .page-numbers li {
     display: inline-block;
 }
-.zm-pagination .page-numbers li .page-numbers {
+.pagination .page-numbers li .page-numbers {
     display: block;
     font-size: 15px;
     font-weight: 400;
@@ -283,35 +283,35 @@ label {
     color: #2f2f2f;
     transition: 0.3s;
 }
-.zm-pagination .page-numbers li .page-numbers.prev,
-.zm-pagination .page-numbers li .page-numbers.next {
+.pagination .page-numbers li .page-numbers.prev,
+.pagination .page-numbers li .page-numbers.next {
     background: #e6e6e6;
     color: #2f2f2f;
     position: relative;
     font-weight: 700 !important;
 }
-.zm-pagination .page-numbers li .page-numbers.prev {
+.pagination .page-numbers li .page-numbers.prev {
     margin-right: 20px;
     padding: 0 20px;
 }
-.zm-pagination .page-numbers li .page-numbers.next {
+.pagination .page-numbers li .page-numbers.next {
     margin-left: 20px;
     padding: 0 20px;
 }
-.zm-pagination .page-numbers li .page-numbers.prev::before,
+.pagination .page-numbers li .page-numbers.prev::before,
 .page-numbers.prev::before {
     content: "\f177";
     font-family: fontawesome;
     padding-right: 15px;
 }
-.zm-pagination .page-numbers li .page-numbers.next::after,
+.pagination .page-numbers li .page-numbers.next::after,
 .page-numbers.next::after {
     content: "\f178";
     font-family: fontawesome;
     padding-left: 15px;
 }
-.zm-pagination .page-numbers li .page-numbers.current,
-.zm-pagination .page-numbers li .page-numbers:not(.zm-pgi-dots):hover {
+.pagination .page-numbers li .page-numbers.current,
+.pagination .page-numbers li .page-numbers:not(.pgi-dots):hover {
     background: #2f2f2f;
     color: #fff;
 }
@@ -441,22 +441,22 @@ label {
 .booking-form-wrap .single-input input[type="submit"]:hover {
     background: #D63B25 none repeat scroll 0 0;
 }
-.zm-form-control.username:focus,
-.zm-form-control.password:focus {
+.form-control.username:focus,
+.form-control.password:focus {
     border: 1px solid red;
 }
 /*----------------------------------------*/
 /*  10. Archive page 1
 /*----------------------------------------*/
-.zm-archive-list > li {
+.archive-list > li {
     padding: 20px 0;
     position: relative;
     cursor: pointer;
 }
-.zm-archive-list {
+.archive-list {
     position: relative;
 }
-.zm-archive-list::before {
+.archive-list::before {
     background: #e6e6e6 none repeat scroll 0 0;
     content: "";
     height: 100%;
@@ -466,14 +466,14 @@ label {
     transform: translateY(-50%);
     width: 1px;
 }
-.zm-archive-list > li > span {
+.archive-list > li > span {
     background: #fff none repeat scroll 0 0;
     display: block;
     padding: 10px 20px 10px 0;
     position: relative;
     z-index: 5;
 }
-.zm-archive-list > li > span::after {
+.archive-list > li > span::after {
     background: #e6e6e6 none repeat scroll 0 0;
     content: "";
     height: 1px;
@@ -484,26 +484,26 @@ label {
     width: 94%;
     z-index: 1;
 }
-.zm-archive-list > li > ul> li {
+.archive-list > li > ul> li {
     padding: 15px 0;
     position: relative;
 }
-.zm-archive-list > li > ul {
+.archive-list > li > ul {
     padding-left: 85px;
 }
-.zm-archive-list > li > ul > li > ul {
+.archive-list > li > ul > li > ul {
     padding-left: 150px;
 }
-.zm-archive-list > li > ul > li > ul > li > ul {
+.archive-list > li > ul > li > ul > li > ul {
     padding-left: 200px;
 }
-.zm-archive-list > li:first-child {
+.archive-list > li:first-child {
     padding-top: 0;
 }
-.zm-archive-list > li:last-child {
+.archive-list > li:last-child {
     padding-bottom: 0;
 }
-.zm-archive-list > li > ul > li > span::before {
+.archive-list > li > ul > li > span::before {
     background: #e6e6e6 none repeat scroll 0 0;
     content: "";
     height: 1px;
@@ -513,11 +513,11 @@ label {
     transform: translateY(-50%);
     width: 50px;
 }
-.zm-archive-list > li > ul > li > span {
+.archive-list > li > ul > li > span {
     position: relative;
     cursor: pointer;
 }
-.zm-archive-list > li > ul > li > span::after {
+.archive-list > li > ul > li > span::after {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #e6e6e6;
     border-radius: 100%;
@@ -529,15 +529,15 @@ label {
     transform: translateY(-50%);
     width: 15px;
 }
-.zm-archive-list > li > ul > li > ul > li {
+.archive-list > li > ul > li > ul > li {
     list-style: outside none disc;
     padding-left: 5px;
 }
-.zm-archive-list > li > ul > li > ul {
+.archive-list > li > ul > li > ul {
     margin-top: 25px;
     padding-left: 50px;
 }
-.zm-archive-list > li > span::before {
+.archive-list > li > span::before {
     background: #fff none repeat scroll 0 0;
     border: 1px solid #eeeeee;
     border-radius: 100%;
@@ -557,7 +557,7 @@ label {
     cursor: pointer;
     font-size: 15px;
 }
-.zm-archive-list > li.expandable > span::before {
+.archive-list > li.expandable > span::before {
     content: "\f107";
 }
 .expand-archive {
@@ -606,7 +606,7 @@ label {
 .dropdown-menu {
     z-index: 99999;
 }
-.archive .zm-pagination .page-numbers li {
+.archive .pagination .page-numbers li {
     display: inline-block;
 }
 /*----------------------------------------*/

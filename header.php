@@ -47,7 +47,7 @@
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7  hidden-xs">
                 <div class="header-top-left">
-                  <nav class="header-top-menu zm-secondary-menu">
+                  <nav class="header-top-menu secondary-menu">
                     <?php
                     // Header Top Menu
                       wp_nav_menu(
@@ -77,16 +77,16 @@
                   <div class="user-accoint topbar-sblock">
                     <span class="login-btn uppercase">Login</span>
                     <div class="login-form-wrap bg-white">
-                      <form class="zm-signin-form text-left">
-                        <input type="text" class="zm-form-control username" placeholder="Username or Email">
-                        <input type="password" class="zm-form-control password" placeholder="Password">
+                      <form class="signin-form text-left">
+                        <input type="text" class="form-control username" placeholder="Username or Email">
+                        <input type="password" class="form-control password" placeholder="Password">
                         <input type="checkbox" value=" Remember Me" class="remember"> &nbsp;Remember Me<br>
-                        <div class="zm-submit-box clearfix  mt-20">
+                        <div class="submit-box clearfix  mt-20">
                           <input type="submit" value="Login">
                           <input type="submit" value="Register">
                         </div>
-                        <a href="#" class="zm-forget">Forget username/password?</a>
-                        <div class="zm-login-social-box">
+                        <a href="#" class="forget">Forget username/password?</a>
+                        <div class="login-social-box">
                           <a href="#" class="social-btn bg-facebook block"><span class="btn_text"><i class="fa fa-facebook"></i>Login with Facebook</span></a>
                           <a href="#" class="social-btn bg-twitter block"><span class="btn_text"><i class="fa fa-twitter"></i>Login with Twitter</span></a>
                         </div>
