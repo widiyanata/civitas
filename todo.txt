@@ -1,5 +1,0 @@
-# Create custom widget popular posts
-
-# Define the list style of widget
-
-## Styling admin widget style
