@@ -1,6 +1,5 @@
 === civitas ===
 
-Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 Requires at least: 4.0
@@ -9,11 +8,11 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called civitas.
+A WordPress theme called civitas.
 
 == Description ==
 
-Basic template for civitas theme
+WordPress theme for news and magazine blog
 
 == Installation ==
 
@@ -23,13 +22,13 @@ Basic template for civitas theme
 
 == Frequently Asked Questions ==
 
-= Does this theme support any plugins? =
+= Do you want to ask? =
 
-civitas includes support for Infinite Scroll in Jetpack.
+Then I will answer.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - Sep 12 2017 =
 * Initial release
 
 == Credits ==

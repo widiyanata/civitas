@@ -62,7 +62,8 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                 <div class="header-top-right clierfix text-right">
-                  <div class="header-social-bookmark topbar-sblock">
+                  <!-- Currently Hidden -->
+                  <div class="header-social-bookmark topbar-sblock sr-only">
                     <ul>
                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                       <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -72,9 +73,10 @@
                     </ul>
                   </div>
                   <div class="zmaga-calendar topbar-sblock">
-                    <span class="calendar uppercase">Sunday, July 31, 2016 </span>
+                    <span class="calendar uppercase"><?php echo current_time("D, M y"); ?></span>
                   </div>
-                  <div class="user-accoint topbar-sblock">
+                  <!-- Currently Hidden -->
+                  <div class="user-accoint topbar-sblock sr-only">
                     <span class="login-btn uppercase">Login</span>
                     <div class="login-form-wrap bg-white">
                       <form class="signin-form text-left">
