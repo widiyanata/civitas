@@ -35,7 +35,7 @@ if ( $query->have_posts() ) { ?>
             <h2 class="post-title"><a href="<?php  the_permalink(); ?>"><?php echo get_the_title(); ?></a></h2>
             <div class="post-meta">
                 <ul>
-                    <li class="s-meta"><a href="<?php echo the_author_link(); ?>" class="author"><?php echo the_author_nickname(); ?></a></li>
+                    <li class="s-meta"><a href="<?php echo the_author_link(); ?>" class="author"><?php echo the_author_meta("nickname"); ?></a></li>
                     <li class="s-meta"><?php echo the_date() ?></li>
                 </ul>
             </div>

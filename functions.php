@@ -21,11 +21,6 @@
 	*	Include Custom Widget
 	*/
 	include_once( dirname( __FILE__ ) . '/inc/widget/widget-init.php' );
-	//
-	// function register_custom_widget() {
-	// 	register_widget('Cat_Widget');
-	// }
-	// add_action( 'widgets_init', 'register_custom_widget' );
 
 if ( ! function_exists( 'civitas_setup' ) ) :
 	/**
@@ -135,6 +130,8 @@ function civitas_widgets_init() {
 	) );
 
 	// Register new Widget : Footer 4 column
+
+	// Column 1
 		register_sidebar( array(
 			'name'          => esc_html__( 'First Widget Footer', 'civitas' ),
 			'id'            => 'widget_footer_first_column',
@@ -144,6 +141,7 @@ function civitas_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		) );
+		// Column 2
 		register_sidebar( array(
 			'name'          => esc_html__( 'Second Widget Footer', 'civitas' ),
 			'id'            => 'widget_footer_second_column',
@@ -153,6 +151,7 @@ function civitas_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		) );
+		// Column 3
 		register_sidebar( array(
 			'name'          => esc_html__( 'Third Widget Footer', 'civitas' ),
 			'id'            => 'widget_footer_third_column',
@@ -162,6 +161,7 @@ function civitas_widgets_init() {
 			'before_title'  => '<h2 class="widget-title">',
 			'after_title'   => '</h2>',
 		) );
+		// Column 4
 		register_sidebar( array(
 			'name'          => esc_html__( 'Forth Widget Footer', 'civitas' ),
 			'id'            => 'widget_footer_forth_column',
@@ -209,6 +209,14 @@ function civitas_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'civitas_scripts' );
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function wpdocs_theme_add_editor_styles() {
+    add_editor_style( 'editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 /**
  * Implement the Custom Header feature.
