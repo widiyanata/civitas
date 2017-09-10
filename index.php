@@ -49,7 +49,10 @@ get_header(); ?>
                           </a>
     										</div>
     										<div class="post-dis text-white">
-    											<h2 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    											<h3 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                          <div class="post-content sr-only">
+                            <?php the_excerpt(); ?>
+                          </div>
     											<div class="post-meta">
     												<ul>
     													<li class="s-meta"><a href="#" class="author"><?php the_author(); ?></a></li>

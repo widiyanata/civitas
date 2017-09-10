@@ -36,23 +36,22 @@
 
 	<div class="entry-content">
 		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'civitas' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
+		/**
+		*	Display Excerpt in Home
+		*	and content in single page
+		*/
+		if ( is_single() ) {
+			the_content();
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'civitas' ),
 				'after'  => '</div>',
 			) );
+		} else {
+			the_excerpt();
+		}
+
+
 		?>
 	</div><!-- .entry-content -->
 
