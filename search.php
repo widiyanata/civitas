@@ -9,13 +9,17 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="page-content" class="page-wrapper">
+	<div class="section single-post-wrap bg-white ptb-70 xs-pt-30">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 columns">
 
 		<?php
 		if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header mt-0 text-uppercase">
 				<h1 class="page-title"><?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'civitas' ), '<span>' . get_search_query() . '</span>' );
@@ -43,9 +47,13 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 sidebar-warp columns">
+		<?php get_sidebar(); ?>
+	</div>
+</div>
+</div>
+</div>
 <?php
 get_sidebar();
 get_footer();
