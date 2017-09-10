@@ -1,1 +1,4 @@
 /resource
+*.dist
+template-front.php
+todo.txt
