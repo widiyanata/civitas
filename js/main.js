@@ -1,8 +1,8 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Zmagazine - HTML Magazine Template for Blogging and News Sites.
+    Template Name: Civitas - HTML Magazine Template for Blogging and News Sites.
     Template URI: https://themeforest.net/user/nilartstudio
-    Description: Zmagazine is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
+    Description: Civitas is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
     Author: Nilartstudio
     Author URI: http://Nilartstudio.com
     Version: 1.0
