@@ -910,12 +910,14 @@ object {
 	max-height: 400px;
 }
 
-/* Trending Post Widget */
+
 .trending .post-thumb img {
 	max-height: 200px;
 }
 
-/* Sidebar Widget */
+/*--------------------------------------------------------------
+## Sidebar Widget
+--------------------------------------------------------------*/
 /*
 * Common
 */
@@ -941,7 +943,7 @@ object {
 .widget_archive li {
     display: inline-block;
     margin-bottom: 5px;
-    padding: 5px;
+    padding: 5px!important;
     background-color: #f0442c;
 }
 
@@ -949,7 +951,9 @@ object {
     color: #eee;
 }
 
-/* Post Single */
+/*--------------------------------------------------------------
+## Post Single
+--------------------------------------------------------------*/
 
 /* Post navigation */
 .nav-previous, .nav-next {
@@ -965,4 +969,14 @@ object {
 .nav-next {
     border-right: 5px solid #303030;
     padding-right: 10px;
+}
+
+/*--------------------------------------------------------------
+## Post Archive
+--------------------------------------------------------------*/
+
+.entry-footer span a {
+    color: #f0442c;
+    font-weight: bold;
+    padding: 7px;
 }

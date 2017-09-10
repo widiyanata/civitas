@@ -73,6 +73,14 @@ nav.secondary-menu ul li:last-child {
     height: 150px;
 }
 
+p.site-title {
+  font-size: 2em;
+  font-weight: bold;
+}
+p.site-title a {
+  color: #333;
+}
+
 .site-desc {
     line-height: 18px;
     margin-top: 4px;
