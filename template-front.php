@@ -12,6 +12,7 @@
  * @package civitas
  */
 
+
 get_header(); ?>
 
   <section id="page-content" class="page-wrapper">
