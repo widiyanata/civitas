@@ -1,7 +1,10 @@
 <?php
-
+/**
+* Displaying posts by popularity - Trending
+*/
   $args = array(
     'post_per_page' => 5,
+    'orderby' => 'comment_count',
   );
   // The Query
   $the_query = new WP_Query( $args );
