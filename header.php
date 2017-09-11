@@ -100,7 +100,7 @@
             </div>
           </div>
         </div>
-        <nav class="navbar navbar-default bootsnav">
+        <nav class="nav navbar navbar-default navbar-sticky bootsnav">
 
             <!-- Start Top Search -->
             <div class="top-search">

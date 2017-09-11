@@ -1,13 +1,13 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Civitas - HTML Magazine Template for Blogging and News Sites. 
+    Template Name: Civitas - HTML Magazine Template for Blogging and News Sites.
     Template URI: https://themeforest.net/user/nilartstudio
     Description: Civitas is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
     Author: Nilartstudio
     Author URI: http://Nilartstudio.com
     Version: 1.0
 
-  Note: This is post type style file. All post type related style included in this file. 
+  Note: This is post type style file. All post type related style included in this file.
 
 -------------------------------------------------------------------------------------*/
 
@@ -372,8 +372,8 @@
 }
 /*post type */
 .post-title {
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 20px;
+    line-height: 24px;
 }
 .post-header {
     padding: 25px 0 15px;
