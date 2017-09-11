@@ -2,14 +2,46 @@
 * Widget Style
 */
 
-/* Widget Category*/
-.widget-cat {
-
-}
-.widget-cat img {
+.widget img {
   width: 100%;
 }
 
+/* Widget Category*/
+.widget-cat {}
+
 .widget-cat article {
   margin-bottom: 10px;
+}
+
+/* Widget Popular */
+.widget-popular ul {
+  list-style: none;
+}
+.widget-popular li {
+  position: relative;
+}
+.widget-popular article .post-popular {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 0 1em;
+  /*background-color: rgba(51, 51, 51, 0.65);*/
+  z-index: 5;
+
+}
+.widget-popular article h4 {
+  color: #333!important;
+}
+.widget-popular article h4 a {
+
+  padding: 10px;
+    display: block;
+    background-color: #fff;
+}
+.widget-popular .post-categories a {
+    padding: 0 10px;
+    background-color: #00c8ff;
+    display: inline-block;
+    color: #fff;
+    text-transform: uppercase;
 }

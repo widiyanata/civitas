@@ -57,7 +57,6 @@ if ( ! function_exists( 'civitas_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'civitas' ),
 			'primary' => esc_html__('Main Top Menu', 'civitas'),
@@ -129,7 +128,8 @@ function civitas_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 
-	// Register new Widget : Footer 4 column
+	/**
+	* Register new Widget : Footer 4 column */
 
 	// Column 1
 		register_sidebar( array(
@@ -222,16 +222,16 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 * Custom Excerpt
 */
 // Changing excerpt length
-function new_excerpt_length($length) {
+function civitas_excerpt_length($length) {
   return 55;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter('excerpt_length', 'civitas_excerpt_length');
 
 // Changing excerpt more
-function new_excerpt_more($more) {
+function civitas_excerpt_more($more) {
   return '<p><a href="'.get_the_permalink().'" rel="nofollow">'. __( 'More', 'civitas' ) .'....</a></p';
 }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'civitas_excerpt_more');
 
 /**
  * Implement the Custom Header feature.

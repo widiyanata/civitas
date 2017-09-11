@@ -1,16 +1,16 @@
 <?php
 /**
-* Widget to display posts by category in sidebar or widget area
+* Widget to display posts by popular in sidebar or widget area
 */
-class Cat_Widget extends WP_Widget {
+class Popular_Widget extends WP_Widget {
 
     // Widget Constructor
     public function __construct(){
       parent::__construct(
-        'cat_widget', // Base ID
-        esc_html__('Sidebar Widget Category', 'civitas'), // Widget Name
+        'popular_widget', // Base ID
+        esc_html__('Sidebar Widget Popular', 'civitas'), // Widget Name
         array(
-          'description' => esc_html__('Widget description is here', 'civitas') // Args
+          'description' => esc_html__('Widget to display popular posts', 'civitas') // Args
         )
       );
     }
@@ -29,54 +29,51 @@ class Cat_Widget extends WP_Widget {
         echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
       }
 
-      echo "<div class='widget-cat'>";
+      echo "<ul class='widget-popular'>";
 
       // Get posts_count field
       $section_postsnr = $instance['posts_count'];
 
       /* Query arguments
       ------------------ */
-      // Posts in category
+      // Popular posts
       $query_args = array(
         'posts_per_page'		=> absint( $section_postsnr ),
         'post_status'         	=> 'publish',
-        'cat'					=> $instance['cat_widget'],
+        'orderby'   => 'comment_count',
         'ignore_sticky_posts'	=> 1
       );
 
       // The Query
-      $query_posts = new WP_Query( apply_filters( 'widget_cat', $query_args ) );
+      $query_posts = new WP_Query( apply_filters( 'widget_popular', $query_args ) );
       $i = 0;
       if( $query_posts->have_posts()) :
         while ( $query_posts->have_posts() ) :
           $query_posts->the_post();
           $i++;
-          if ( $i == 1 ) { $class = "col-md-12 mb-10"; } else { $class = 'col-md-4'; }
           ?>
+          <li>
+            <article class="" data-dark-overlay="2.5"  data-scrim-bottom="9" data-effict-zoom="1">
+              <!-- Post Thumbnail -->
+              <?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail();
+              } else { ?>
+                <img src="http://placehold.it/300x200" alt="">
+              <?php } ?>
+              <div class="post-popular">
+                <!-- Category -->
+                <?php the_category(); ?>
+                <?php the_title( '<h4 class=""><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
 
-          <article class="row">
-
-              <div class="<?php echo $class; ?>">
-                <?php if ( has_post_thumbnail() ) {
-                  the_post_thumbnail();
-                } else { ?>
-                  <img src="http://placehold.it/300x200" alt="">
-                <?php } ?>
               </div>
-              <div class="col-md-8">
-                <?php the_title( '<h4 class="mb-10"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-                <!-- Disable category -->
-                <?php // the_category(); ?>
-              </div>
-
-          </article>
-
+            </article>
+          </li>
 
           <?php
         endwhile;
       endif;
 
-      echo "</div>";
+      echo "</ul>";
       echo $args['after_widget'];
     }
 
@@ -95,24 +92,6 @@ class Cat_Widget extends WP_Widget {
     		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'civitas' ); ?></label>
     		<input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
   		</p>
-
-      <p>
-        <label for="<?php echo $this->get_field_id( 'cat_widget' ); ?>"><?php esc_html_e( 'Choose category', 'civitas' ); ?></label>
-        <?php
-
-        wp_dropdown_categories( array(
-
-          'orderby'    => 'title',
-          'hide_empty' => true,
-          'name'       => $this->get_field_name( 'cat_widget' ),
-          'id'         => $this->get_field_id( 'cat_widget' ),
-          'class'      => 'widefat',
-          'selected'   => intval($instance['cat_widget']),
-
-        ) );
-
-        ?>
-      </p>
 
       <!-- Add new field : Number of posts displayed -->
       <p>
@@ -137,7 +116,7 @@ class Cat_Widget extends WP_Widget {
       // processes widget options on save
       $instance = $old_instance;
   		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-      $instance['cat_widget'] = absint( $new_instance['cat_widget'] );
+      $instance['popular_widget'] = absint( $new_instance['popular_widget'] );
 
       // New field : post count
       $instance['posts_count'] = ( !empty( $new_instance['posts_count'] ) ) ? strip_tags( $new_instance['posts_count'] ) :'5';
