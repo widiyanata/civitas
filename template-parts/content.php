@@ -21,6 +21,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php civitas_posted_on(); ?>
+			<p><?php  civitas_entry_footer(); ?></p>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>

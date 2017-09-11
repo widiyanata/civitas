@@ -21,17 +21,12 @@
       $author[] =  get_the_author();
       $author_link[] = get_the_author_link();
       $cat[] = get_the_category();
-
     }
 
     /* Restore original Post Data */
     wp_reset_postdata();
-  } else {
-    // no posts found
   }
-echo '<pre>';
-  var_dump($cat);
-echo '</pre>';
+
 if ( is_home() ) : ?>
 <!-- Start trending post area -->
 <div class="trending-post-area">
