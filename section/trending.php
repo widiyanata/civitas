@@ -17,6 +17,8 @@
       $date[] = get_the_date();
       $author[] =  get_the_author();
       $author_link[] = get_the_author_link();
+      $cat[] = get_the_category();
+
     }
 
     /* Restore original Post Data */
@@ -24,9 +26,9 @@
   } else {
     // no posts found
   }
-
-  //var_dump($thumb);
-
+echo '<pre>';
+  var_dump($cat);
+echo '</pre>';
 if ( is_home() ) : ?>
 <!-- Start trending post area -->
 <div class="trending-post-area">
@@ -45,7 +47,7 @@ if ( is_home() ) : ?>
               <?php endif ?>
             </div>
             <div class="post-dis text-white">
-              <div class="category"><a href="#" class="bg-cat-3 cat-btn">Nature</a></div>
+              <div class="category"><a href="<?php echo get_category_link( $cat[0][0]->term_id ); ?>" class="bg-cat-3 cat-btn"><?php echo $cat[0][0]->cat_name; ?></a></div>
               <h2 class="post-title">
                 <a href="<?php echo $link[0]; ?>"><?php echo $title[0]; ?></a>
               </h2>
@@ -72,7 +74,7 @@ if ( is_home() ) : ?>
                   <?php endif ?>
                 </div>
                 <div class="post-dis text-white">
-                  <div class="category"><a href="#" class="bg-cat-4 cat-btn">Food</a></div>
+                  <div class="category"><a href="<?php echo get_category_link( $cat[1][0]->term_id ); ?>" class="bg-cat-5 cat-btn"><?php echo $cat[1][0]->cat_name; ?></a></div>
                   <h2 class="post-title"><a href="<?php echo $link[1]; ?>"><?php echo $title[1]; ?></a></h2>
                   <div class="post-meta">
                     <ul>
@@ -93,7 +95,7 @@ if ( is_home() ) : ?>
                   <?php endif ?>
                 </div>
                 <div class="post-dis text-white">
-                  <div class="category"><a href="#" class="bg-cat-5 cat-btn">Fashion</a></div>
+                  <div class="category"><a href="<?php echo get_category_link( $cat[2][0]->term_id ); ?>" class="bg-cat-4 cat-btn"><?php echo $cat[2][0]->cat_name; ?></a></div>
                   <h2 class="post-title"><a href="<?php echo $link[2]; ?>"><?php echo $title[2]; ?></a></h2>
                   <div class="post-meta">
                     <ul>
@@ -120,7 +122,7 @@ if ( is_home() ) : ?>
                   <?php endif ?>
                 </div>
                 <div class="post-dis text-white">
-                  <div class="category"><a href="#" class="bg-cat-2 cat-btn">Business</a></div>
+                  <div class="category"><a href="<?php echo get_category_link( $cat[3][0]->term_id ); ?>" class="bg-cat-1 cat-btn"><?php echo $cat[3][0]->cat_name; ?></a></div>
                   <h2 class="post-title"><a href="<?php echo $link[3]; ?>"><?php echo $title[3]; ?></a></h2>
                   <div class="post-meta">
                     <ul>
@@ -141,7 +143,7 @@ if ( is_home() ) : ?>
                   <?php endif ?>
                 </div>
                 <div class="post-dis text-white">
-                  <div class="category"><a href="#" class="bg-cat-1 cat-btn">Animal</a></div>
+                  <div class="category"><a href="<?php echo get_category_link( $cat[4][0]->term_id ); ?>" class="bg-cat-2 cat-btn"><?php echo $cat[4][0]->cat_name; ?></a></div>
                   <h2 class="post-title"><a href="<?php echo $link[4]; ?>"><?php echo $title[4]; ?></a></h2>
                   <div class="post-meta">
                     <ul>
