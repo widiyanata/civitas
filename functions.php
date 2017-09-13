@@ -131,7 +131,6 @@ function civitas_widgets_init() {
 	/**
 	* Register new Widget : Before posts 3 column */
 
-	// Column 1
 		register_sidebar( array(
 			'name'          => esc_html__( 'Before post widget rea', 'civitas' ),
 			'id'            => 'cat-widget-3-col',
@@ -195,23 +194,23 @@ function civitas_scripts() {
 	wp_enqueue_style( 'civitas-style', get_stylesheet_uri() );
 
   // Add css style
-  wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
-  wp_enqueue_style('core-style', get_template_directory_uri() . '/css/core.css');
-  wp_enqueue_style('animate', get_template_directory_uri() . '/css/shortcode/shortcodes.css');
-  wp_enqueue_style('main-style', get_template_directory_uri() . '/css/style.css');
-  wp_enqueue_style('responsive', get_template_directory_uri() . '/css/responsive.css');
-  wp_enqueue_style('custom-style', get_template_directory_uri() . '/css/custom.css');
+  wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+  wp_enqueue_style('core-style', get_template_directory_uri() . '/assets/css/core.css');
+  wp_enqueue_style('animate', get_template_directory_uri() . '/assets/css/shortcode/shortcodes.css');
+  wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/style.css');
+  wp_enqueue_style('responsive', get_template_directory_uri() . '/assets/css/responsive.css');
+  wp_enqueue_style('custom-style', get_template_directory_uri() . '/assets/css/custom.css');
 
 
 
   // Add script to footer
-  // wp_enqueue_script( 'civitas-jquery-script', "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js", array(), '1.2', true );
-  wp_enqueue_script( 'civitas-bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '20151215', true );
-  wp_enqueue_script( 'civitas-plugins', get_template_directory_uri() . '/js/plugins.js', array(), '20151215', true );
-  wp_enqueue_script( 'civitas-owl-carousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '20151215', true );
-  wp_enqueue_script( 'civitas-bootsnav', get_template_directory_uri() . '/js/bootsnav.js', array(), '20151215', true );
-  wp_enqueue_script( 'civitas-main-js', get_template_directory_uri() . '/js/main.js', array(), '20151215', true );
-  wp_enqueue_script( 'civitas-modernizr-js', get_template_directory_uri() . '/js/vendor/modernizr-2.8.3.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-jquery-script', "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js", array(), '1.2', true );
+  wp_enqueue_script( 'civitas-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-plugins', get_template_directory_uri() . '/assets/js/plugins.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-bootsnav', get_template_directory_uri() . '/assets/js/bootsnav.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
+  wp_enqueue_script( 'civitas-modernizr-js', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.8.3.min.js', array(), '20151215', true );
 	// wp_enqueue_script( 'civitas-masonry-js', "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js", array(), '20151215', true );
 
 
