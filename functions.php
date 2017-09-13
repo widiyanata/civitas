@@ -124,8 +124,8 @@ function civitas_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	) );
 
 	/**
@@ -138,8 +138,8 @@ function civitas_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		) );
 
 	/**
@@ -152,8 +152,8 @@ function civitas_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		) );
 		// Column 2
 		register_sidebar( array(
@@ -162,8 +162,8 @@ function civitas_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		) );
 		// Column 3
 		register_sidebar( array(
@@ -172,8 +172,8 @@ function civitas_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		) );
 		// Column 4
 		register_sidebar( array(
@@ -182,8 +182,8 @@ function civitas_widgets_init() {
 			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
 		) );
 }
 add_action( 'widgets_init', 'civitas_widgets_init' );

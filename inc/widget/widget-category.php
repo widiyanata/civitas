@@ -51,25 +51,55 @@ class Cat_Widget extends WP_Widget {
         while ( $query_posts->have_posts() ) :
           $query_posts->the_post();
           $i++;
-          if ( $i == 1 ) { $class = "col-md-12 mb-10"; } else { $class = 'col-md-4'; }
-          ?>
-
-          <article class="row ptb-10 <?php echo $i == 1 ? "first" : "" ?>">
-
-              <div class="<?php echo $class; ?>" <?php echo $i == 1 ? "data-effict-zoom='1'" : "" ?> >
+          if ( $i == 1 ) { ?>
+            
+            <article class="trending-post lay-d single-post mb-20" data-effict-zoom="1">
+              <div class="post-thumb">
                 <?php if ( has_post_thumbnail() ) {
                   the_post_thumbnail();
                 } else { ?>
-                  <img src="http://placehold.it/300x200" alt="">
+                  <a href="#" data-dark-overlay="2.5" data-scrim-bottom="9">
+                    <img src="http://placehold.it/300x200" alt="img">
+                  </a>
                 <?php } ?>
               </div>
-              <div class="detail <?php echo $i == 1 ? "col-md-12" : "col-md-8" ?>">
-                <?php the_title( '<h4 class="mb-10"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-                <!-- category -->
-                <?php // the_category(); ?>
+              <div class="post-dis text-white">
+                <?php the_title( '<h4 class="mb-10 post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
+                <div class="post-meta">
+                  <ul>
+                    <li class="s-meta"><a href="<?php the_author_link(); ?>" class="author"><?php the_author(); ?></a></li>
+                    <li class="s-meta"><?php the_date(); ?></li>
+                  </ul>
+                </div>
               </div>
+            </article>
+            <?php } else  {  ?>
 
+            <article class="post-lay-g single-post clearfix">
+              <div class="post-thumb f-left">
+              <?php if ( has_post_thumbnail() ) {
+                the_post_thumbnail();
+              } else { ?>
+                <a href="#" data-dark-overlay="2.5" data-scrim-bottom="9">
+                  <img src="http://placehold.it/300x200" alt="img">
+                </a>
+              <?php } ?>
+            </div>
+            <div class="post-dis f-right">
+              <div class="post-header">
+                <?php the_title( '<h4 class="mb-10 post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
+                <div class="post-meta">
+                  <ul>
+                    <li class="s-meta"><a href="<?php the_author_link(); ?>" class="author"><?php the_author(); ?></a></li>
+                    <li class="s-meta"><?php the_date(); ?></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </article>
+      <?php  } // end else ?>
+
+
 
 
           <?php
