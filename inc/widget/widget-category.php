@@ -54,18 +54,18 @@ class Cat_Widget extends WP_Widget {
           if ( $i == 1 ) { $class = "col-md-12 mb-10"; } else { $class = 'col-md-4'; }
           ?>
 
-          <article class="row">
+          <article class="row ptb-10 <?php echo $i == 1 ? "first" : "" ?>">
 
-              <div class="<?php echo $class; ?>">
+              <div class="<?php echo $class; ?>" <?php echo $i == 1 ? "data-effict-zoom='1'" : "" ?> >
                 <?php if ( has_post_thumbnail() ) {
                   the_post_thumbnail();
                 } else { ?>
                   <img src="http://placehold.it/300x200" alt="">
                 <?php } ?>
               </div>
-              <div class="col-md-8">
+              <div class="detail <?php echo $i == 1 ? "col-md-12" : "col-md-8" ?>">
                 <?php the_title( '<h4 class="mb-10"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' ); ?>
-                <!-- Disable category -->
+                <!-- category -->
                 <?php // the_category(); ?>
               </div>
 

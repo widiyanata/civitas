@@ -915,41 +915,6 @@ object {
 	max-height: 200px;
 }
 
-/*--------------------------------------------------------------
-## Sidebar Widget
---------------------------------------------------------------*/
-/*
-* Common
-*/
-.widget-title {
-    font-size: 1.2em;
-    text-transform: uppercase;
-    position: relative;
-		padding-bottom: 15px;
-		margin-bottom: 15px;
-}
-
-.widget-title:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 10%;
-    height: 4px;
-    background-color: #333;
-    left: 0;
-}
-
-/* Widget_archive */
-.widget_archive li {
-    display: inline-block;
-    margin-bottom: 5px;
-    padding: 5px!important;
-    background-color: #f0442c;
-}
-
-.widget_archive li a {
-    color: #eee;
-}
 
 /*--------------------------------------------------------------
 ## Post Single

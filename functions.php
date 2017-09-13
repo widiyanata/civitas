@@ -129,6 +129,20 @@ function civitas_widgets_init() {
 	) );
 
 	/**
+	* Register new Widget : Before posts 3 column */
+
+	// Column 1
+		register_sidebar( array(
+			'name'          => esc_html__( 'Before post widget rea', 'civitas' ),
+			'id'            => 'cat-widget-3-col',
+			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		) );
+
+	/**
 	* Register new Widget : Footer 4 column */
 
 	// Column 1

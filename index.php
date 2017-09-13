@@ -14,6 +14,17 @@
 
 get_header(); ?>
 
+<!-- Widget 3 Column -->
+<?php if ( is_active_sidebar( 'cat-widget-3-col' ) ) : ?>
+    <div id="before-post-widget" class="widget-area bg-gray border-bottom" role="complementary">
+      <div class="container">
+        <div class="row mb-40 mt-40">
+          <?php dynamic_sidebar( 'cat-widget-3-col' ); ?>
+        </div>
+      </div>
+    </div>
+<?php endif; ?>
+
   <section id="page-content" class="page-wrapper">
 		<!-- Start  news  -->
 		<div class="section bg-white ptb-70">
@@ -23,6 +34,9 @@ get_header(); ?>
 					<!-- Start left side -->
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 columns">
             <?php get_template_part('section/trending', 'slider') ?>
+
+
+
 						<div class="row mb-40">
 							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="section-title">
@@ -49,13 +63,17 @@ get_header(); ?>
                           </a>
     										</div>
     										<div class="post-dis text-white">
-    											<h3 class="post-title h3"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+    											<h3 class="post-title h3">
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                          </h3>
                           <div class="post-content sr-only">
                             <?php the_excerpt(); ?>
                           </div>
     											<div class="post-meta">
     												<ul>
-    													<li class="s-meta"><a href="#" class="author"><?php the_author(); ?></a></li>
+    													<li class="s-meta">
+                                <a href="<?php the_author_link(); ?>" class="author"><?php the_author(); ?></a>
+                              </li>
     												</ul>
     											</div>
     										</div>
@@ -65,11 +83,10 @@ get_header(); ?>
                 	<?php endwhile;
                   // the_posts_navigation();
 
-                  else : ?>
+                  else :
+                     get_template_part( 'template-parts/content', 'none' );
 
-                		<?php // No Posts Found ?>
-
-                <?php endif; ?>
+                endif; ?>
 
                 </div>
 							</div>

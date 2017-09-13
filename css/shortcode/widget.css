@@ -1,7 +1,27 @@
-/**
-* Widget Style
+/*--------------------------------------------------------------
+## Widget Style
+--------------------------------------------------------------*/
+/*
+* Common
 */
+.widget-title {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    position: relative;
+		padding-bottom: 15px;
+		margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
 
+.widget-title:after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    width: 15%;
+    height: 8px;
+    background-color: #333;
+    left: 0;
+}
 .widget img {
   width: 100%;
 }
@@ -44,4 +64,30 @@
     display: inline-block;
     color: #fff;
     text-transform: uppercase;
+}
+
+/* Widget_archive */
+.widget_archive li {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 5px!important;
+    background-color: #f0442c;
+}
+
+.widget_archive li a {
+    color: #eee;
+}
+
+/* Widget Category 3 Col */
+.widget .first {
+  position: relative;
+}
+.widget .first .detail {
+  position: absolute;
+  bottom: 15px;
+}
+.widget .first .detail h4 {
+  color: #fff;
+  padding: 15px;
+  text-shadow: 1px 1px 1px #333;
 }
