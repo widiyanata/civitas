@@ -8,7 +8,7 @@ class Cat_Widget_3_Col extends WP_Widget {
     public function __construct(){
       parent::__construct(
         'cat-widget-3-col', // Base ID
-        esc_html__('Section: Before post area', 'civitas'), // Widget Name
+        esc_html__('Section: Before Post Area', 'civitas'), // Widget Name
         array(
           'description' => esc_html__('Widget to display posts by category in before post section area', 'civitas') // Args
         )
@@ -49,9 +49,9 @@ class Cat_Widget_3_Col extends WP_Widget {
         $query_args = array(
           'posts_per_page'		=> absint( $section_postsnr ),
           'post_status'         	=> 'publish',
-          // 'cat'					=> $instance["cat_widget_col_$i"],
           'cat' => $cat_name,
-          'ignore_sticky_posts'	=> 1
+          'ignore_sticky_posts'	=> 1,
+          // 'orderby' => 'title',
         );
 
         // The Query
@@ -63,7 +63,7 @@ class Cat_Widget_3_Col extends WP_Widget {
             $c++;
             if ( $c == 1 ) { ?>
 
-              <article class="trending-post lay-d single-post mb-20" data-effict-zoom="1">
+              <article class="trending-post lay-d single-post mb-20" data-dark-overlay="2.5" data-scrim-bottom="9" data-effict-zoom="1">
                 <div class="post-thumb">
                   <?php if ( has_post_thumbnail() ) {
                     the_post_thumbnail();
@@ -85,12 +85,12 @@ class Cat_Widget_3_Col extends WP_Widget {
               </article>
               <?php } else  {  ?>
 
-              <article class="post-lay-g single-post clearfix">
+              <article class="post-lay-g single-post clearfix mb-20">
                 <div class="post-thumb f-left">
                 <?php if ( has_post_thumbnail() ) {
                   the_post_thumbnail();
                 } else { ?>
-                  <a href="#" data-dark-overlay="2.5" data-scrim-bottom="9">
+                  <a href="#">
                     <img src="http://placehold.it/300x200" alt="img">
                   </a>
                 <?php } ?>

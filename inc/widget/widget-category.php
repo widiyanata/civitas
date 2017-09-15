@@ -10,7 +10,7 @@ class Cat_Widget extends WP_Widget {
         'cat_widget', // Base ID
         esc_html__('Sidebar Widget Category', 'civitas'), // Widget Name
         array(
-          'description' => esc_html__('Widget description is here', 'civitas') // Args
+          'description' => esc_html__('Widget to display post by category', 'civitas') // Args
         )
       );
     }
@@ -52,7 +52,7 @@ class Cat_Widget extends WP_Widget {
           $query_posts->the_post();
           $i++;
           if ( $i == 1 ) { ?>
-            
+
             <article class="trending-post lay-d single-post mb-20" data-effict-zoom="1">
               <div class="post-thumb">
                 <?php if ( has_post_thumbnail() ) {

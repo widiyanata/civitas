@@ -7,11 +7,6 @@
  * @package civitas
  */
 
- /**
-	* Include Kirki
- 	*/
-	include_once( dirname( __FILE__ ) . '/inc/kirki/kirki.php' );
-
 	/**
 	* Include Bootstrap navwalker
 	*/
@@ -245,6 +240,12 @@ function civitas_excerpt_more($more) {
   return '<p><a href="'.get_the_permalink().'" rel="nofollow">'. __( 'More', 'civitas' ) .'....</a></p';
 }
 add_filter('excerpt_more', 'civitas_excerpt_more');
+
+/**
+ * Include Kirki
+ */
+ include_once( dirname( __FILE__ ) . '/inc/customizer/civitas-customizer.php' );
+ include_once( dirname( __FILE__ ) . '/inc/customizer/kirki.php' );
 
 /**
  * Implement the Custom Header feature.
