@@ -58,7 +58,7 @@
 												<span class="sep"> | </span>
 												<?php
 													/* translators: 1: Theme name, 2: Theme author. */
-													printf( esc_html__( 'Theme: %1$s by %2$s.', 'civitas' ), 'civitas', '<a href="https://automattic.com/">Widiyanata</a>' );
+													printf( esc_html__( 'Theme: %1$s by %2$s.', 'civitas' ), 'civitas', '<a href="https://widiyanata.com/">Widiyanata</a>' );
 												?>
 											</div><!-- .site-info -->
 										</div>
