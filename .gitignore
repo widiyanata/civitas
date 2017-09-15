@@ -1,5 +1,6 @@
 /resource
 *.dist
+.gitignore
 template-front.php
 todo.txt
 readme.md
