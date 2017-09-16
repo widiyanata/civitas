@@ -14,9 +14,13 @@ function register_custom_widget() {
   // Popular Widget
   require_once get_template_directory() . '/inc/widget/widget-popular.php';
 
-  register_widget('Cat_Widget');
+  // Featured Widget
+  require_once get_template_directory() . '/inc/widget/widget-featured-posts.php';
+
+  register_widget('Cat_Widget_Sidebar');
   register_widget('Popular_Widget');
   register_widget('Cat_Widget_3_Col');
+  register_widget('Featured_Widget');
 }
 add_action( 'widgets_init', 'register_custom_widget' );
 
