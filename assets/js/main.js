@@ -222,8 +222,8 @@
         autoplay:false,
         autoplayTimeout:4000,
         autoplayHoverPause:true,
-        dots:false,
-        nav:true,
+        dots:true,
+        nav:false,
         navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
         lazyLoad:true,
         responsive : {
