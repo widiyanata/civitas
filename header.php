@@ -73,7 +73,7 @@
                     </ul>
                   </div>
                   <div class="zmaga-calendar topbar-sblock">
-                    <span class="calendar uppercase"><?php echo current_time("D, M y"); ?></span>
+                    <span class="calendar uppercase"><?php echo current_time( get_option('date_format') ); ?></span>
                   </div>
                   <!-- Currently Hidden -->
                   <div class="user-accoint topbar-sblock sr-only">
