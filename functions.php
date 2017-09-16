@@ -128,7 +128,7 @@ function civitas_widgets_init() {
 
 		register_sidebar( array(
 			'name'          => esc_html__( 'Before post widget rea', 'civitas' ),
-			'id'            => 'cat-widget-3-col',
+			'id'            => 'widget-before-post',
 			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',

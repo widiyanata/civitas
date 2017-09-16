@@ -6,12 +6,16 @@ class Cat_Widget_3_Col extends WP_Widget {
 
     // Widget Constructor
     public function __construct(){
+
+      $control_ops = array( 'width' => NULL, 'height' => NULL, 'id_base' => 'cv-widget' );
       parent::__construct(
         'cat-widget-3-col', // Base ID
-        esc_html__('Section: Before Post Area', 'civitas'), // Widget Name
+        esc_html__('3 Columns Category', 'civitas'), // Widget Name
         array(
-          'description' => esc_html__('Widget to display posts by category in before post section area', 'civitas') // Args
-        )
+          'classname' => 'custom_widget',
+          'description' => esc_html__('Widget to display posts by category in before post section area, please only add to Before post widget area', 'civitas') // Args
+        ),
+        $control_ops
       );
     }
 
