@@ -679,7 +679,7 @@
 }
 /*Post title color difile overwite*/
 .post-title a {
-    color: inherit !important;
+    /*color: inherit !important;*/
 }
 .post-title a:hover {
     color: #f0442c !important;

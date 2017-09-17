@@ -10,10 +10,10 @@ class Cat_Widget_3_Col extends WP_Widget {
       $control_ops = array( 'width' => NULL, 'height' => NULL, 'id_base' => 'cv-widget' );
       parent::__construct(
         'cat-widget-3-col', // Base ID
-        esc_html__('3 Columns Category', 'civitas'), // Widget Name
+        esc_html__('Section: 3 Columns Category', 'civitas'), // Widget Name
         array(
           'classname' => 'custom_widget',
-          'description' => esc_html__('Widget to display posts by category in before post section area, please only add to Before post widget area', 'civitas') // Args
+          'description' => esc_html__('Widget to display posts by category, please please do not add this to widget sidebar', 'civitas') // Args
         ),
         $control_ops
       );

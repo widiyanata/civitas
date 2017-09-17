@@ -8,7 +8,7 @@ class Cat_Widget_Sidebar extends WP_Widget {
     public function __construct(){
       parent::__construct(
         'cat_widget', // Base ID
-        esc_html__('Sidebar Widget Category', 'civitas'), // Widget Name
+        esc_html__('Sidebar: Widget Category', 'civitas'), // Widget Name
         array(
           'description' => esc_html__('Widget to display post by category', 'civitas') // Args
         )

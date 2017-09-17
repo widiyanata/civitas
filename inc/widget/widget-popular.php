@@ -8,7 +8,7 @@ class Popular_Widget extends WP_Widget {
     public function __construct(){
       parent::__construct(
         'popular_widget', // Base ID
-        esc_html__('Sidebar Widget Popular', 'civitas'), // Widget Name
+        esc_html__('Sidebar: Widget Popular', 'civitas'), // Widget Name
         array(
           'description' => esc_html__('Widget to display popular posts', 'civitas') // Args
         )
