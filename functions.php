@@ -118,7 +118,7 @@ function civitas_widgets_init() {
 	* Register new Widget : Before posts  */
 
 		register_sidebar( array(
-			'name'          => esc_html__( 'Before post widget rea', 'civitas' ),
+			'name'          => esc_html__( 'Before post widget area', 'civitas' ),
 			'id'            => 'widget-before-post',
 			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
@@ -127,7 +127,20 @@ function civitas_widgets_init() {
 			'after_title'   => '</h3>',
 		) );
 
-		
+		/**
+		* Register new Widget : Before Footer  */
+
+			register_sidebar( array(
+				'name'          => esc_html__( 'Before Footer widget area', 'civitas' ),
+				'id'            => 'widget-before-footer',
+				'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
+				'before_widget' => '<section id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</section>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			) );
+
+
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'civitas' ),
 		'id'            => 'sidebar-1',

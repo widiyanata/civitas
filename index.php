@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<!-- Widget 3 Column -->
+<!-- Before post widget area -->
 <?php if ( is_active_sidebar( 'widget-before-post' ) ) : ?>
     <div id="before-post-widget" class="widget-area bg-gray border-bottom" role="complementary">
       <div class="container">
@@ -123,5 +123,16 @@ get_header(); ?>
 		<!-- End news  -->
   </section>
 
+
+  <!-- Before Footer widget area -->
+  <?php if ( is_active_sidebar( 'widget-before-footer' ) ) : ?>
+      <div id="before-post-widget" class="widget-area bg-gray border-bottom" role="complementary">
+        <div class="container">
+          <div class="row mb-40 mt-40">
+            <?php dynamic_sidebar( 'widget-before-footer' ); ?>
+          </div>
+        </div>
+      </div>
+  <?php endif; ?>
   <?php
 get_footer();

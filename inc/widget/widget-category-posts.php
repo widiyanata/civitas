@@ -2,13 +2,13 @@
 /**
 * Widget to display posts by category in sidebar or widget area
 */
-class Featured_Widget extends WP_Widget {
+class Section_Category_Widget extends WP_Widget {
 
     // Widget Constructor
     public function __construct(){
       parent::__construct(
         'featured_widget', // Base ID
-        esc_html__('Section: Featured Posts Widget', 'civitas'), // Widget Name
+        esc_html__('Section: Category Posts Widget', 'civitas'), // Widget Name
         array(
           'description' => esc_html__('Widget to display category post', 'civitas') // Args
         )
@@ -100,6 +100,7 @@ class Featured_Widget extends WP_Widget {
       $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'civitas' );
       $posts_count = ! empty( $instance['posts_count'] ) ? $instance['posts_count'] : 5;
       $item_to_display = ! empty( $instance['item-to-display'] ) ? $instance['item-to-display'] : 4;
+      $cat = ! empty( $instance['car_widget'] ) ? $instance['cat_widget'] : '';
   		?>
   		<p>
     		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'civitas' ); ?></label>
@@ -115,7 +116,7 @@ class Featured_Widget extends WP_Widget {
         'name'       => $this->get_field_name( 'cat_widget' ),
         'id'         => $this->get_field_id( 'cat_widget' ),
         'class'      => 'widefat',
-        'selected'   => intval($instance['cat_widget']),
+        'selected'   => intval($cat),
 
       ) );
       ?>
