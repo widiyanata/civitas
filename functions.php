@@ -85,12 +85,12 @@ if ( ! function_exists( 'civitas_setup' ) ) :
 		 *
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
-		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
-			'flex-width'  => true,
-			'flex-height' => true,
-		) );
+		// add_theme_support( 'custom-logo', array(
+		// 	'height'      => 50,
+		// 	'width'       => 50,
+		// 	'flex-width'  => false,
+		// 	'flex-height' => false,
+		// ) );
 	}
 endif;
 add_action( 'after_setup_theme', 'civitas_setup' );
@@ -130,15 +130,15 @@ function civitas_widgets_init() {
 		/**
 		* Register new Widget : Before Footer  */
 
-			register_sidebar( array(
-				'name'          => esc_html__( 'Before Footer widget area', 'civitas' ),
-				'id'            => 'widget-before-footer',
-				'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
-				'before_widget' => '<section id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</section>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
-			) );
+		register_sidebar( array(
+			'name'          => esc_html__( 'Before Footer widget area', 'civitas' ),
+			'id'            => 'widget-before-footer',
+			'description'   => esc_html__( 'Add widgets here.', 'civitas' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+		) );
 
 
 	register_sidebar( array(

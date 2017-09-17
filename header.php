@@ -21,8 +21,6 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script> -->
 
     <?php wp_head(); ?>
 
@@ -52,7 +50,7 @@
                     // Header Top Menu
                       wp_nav_menu(
                         array(
-                          'menu' => 'top-footer',
+                          'menu' => 'top-menu',
                           'theme_location' => 'top-menu',
                         )
                       );
@@ -62,7 +60,7 @@
               </div>
               <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
                 <div class="header-top-right clierfix text-right">
-                  <!-- Currently Hidden -->
+                  <!-- Social Icon: Currently Hidden -->
                   <div class="header-social-bookmark topbar-sblock sr-only">
                     <ul>
                       <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -72,6 +70,7 @@
                       <li><a href="#"><i class="fa fa-rss"></i></a></li>
                     </ul>
                   </div>
+                  <!-- /.social icon -->
                   <div class="zmaga-calendar topbar-sblock">
                     <span class="calendar uppercase"><?php echo current_time( get_option('date_format') ); ?></span>
                   </div>
@@ -125,7 +124,17 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="#brand"><img src="http://placehold.it/100x100" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="<?php echo esc_html_e( home_url() ); ?>">
+                    <?php
+                      $logo = get_theme_mod('logo', '');
+                      if ( !empty($logo) ) : ?>
+                        <img src="<?php echo $logo; ?>" class="logo" alt="">
+                    <?php else:  ?>
+                      <span class="sr-only">
+                        <?php  bloginfo( 'name' );  ?>
+                      </span>
+                    <?php endif; ?>
+                    </a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -159,20 +168,20 @@
                       <div class="logo">
                         <div class="site-branding">
                           <?php
-                            the_custom_logo();
+                            // the_custom_logo();
                             if ( is_front_page() && is_home() ) : ?>
-                                    <h1 class="site-title">
-                                      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                        <?php bloginfo( 'name' ); ?>
-                                      </a>
-                                    </h1>
-                                    <?php else : ?>
-                                    <p class="site-title">
-                                      <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                                        <?php bloginfo( 'name' ); ?>
-                                      </a>
-                                    </p>
-                                    <?php
+                              <h1 class="site-title">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                  <?php bloginfo( 'name' ); ?>
+                                </a>
+                              </h1>
+                              <?php else : ?>
+                              <p class="site-title">
+                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                                  <?php bloginfo( 'name' ); ?>
+                                </a>
+                              </p>
+                              <?php
                             endif;
 
                             $description = get_bloginfo( 'description', 'display' );

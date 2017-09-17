@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-  Template Name: Civitas - HTML Magazine Template for Blogging and News Sites. 
+  Template Name: Civitas - HTML Magazine Template for Blogging and News Sites.
   Template URI: https://themeforest.net/user/nilartstudio
   Description: Civitas is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
   Author: Nilartstudio
@@ -8,22 +8,22 @@
   Version: 1.0
 
 -----------------------------------------------------------------------------------
-  
+
   CSS INDEX
   ===================
 
   1. Google fonts
   2. Breadcrumb style
-  3. Custom-content all  
-  4. Section title 
+  3. Custom-content all
+  4. Section title
   5. Subcribe form area
   6. Tag Cloud
   7. Pagination
   8. Owl Navigator Style
   9. Booking form
-  10. Archive page 1 
+  10. Archive page 1
   11. Archive page 2
-  12. Contact 
+  12. Contact
   13. Registation page
   14. Page not found (404)
   15. Scroll To Top
@@ -41,7 +41,7 @@
   --> slider.css
   --> preloader.css
   --> shortcode.css
-    
+
 -----------------------------------------------------------------------------------*/
 /*----------------------------------------*/
 /*  1. Google fonts
@@ -77,7 +77,7 @@
     color: #ffffff;
 }
 /*----------------------------------------*/
-/*  3. Custom-content all   
+/*  3. Custom-content all
 /*----------------------------------------*/
 .boxed-layout .wrapper {
     box-shadow: -3px 0 50px -2px rgba(0, 0, 0, 0.14);
@@ -166,6 +166,10 @@ label {
 
 .advertisement a {
     display: block;
+}
+
+.advertisement a img {
+  width: 100%;
 }
 /*----------------------------------------*/
 /*  5. Subcribe form area
@@ -379,7 +383,7 @@ label {
     color: #f3f3f3;
 }
 /*----------------------------------------*/
-/*  9. Booking form 
+/*  9. Booking form
 /*----------------------------------------*/
 .booking-form-wrap {
     background: #ecf3f6 none repeat scroll 0 0;
