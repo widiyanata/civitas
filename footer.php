@@ -21,22 +21,22 @@
 					<!-- Widget Footer 4 Column -->
 						<div class="row">
 								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-										<div class="pr-40">
+										<div class="">
 											<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('widget_footer_first_column') ) ?>
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-										<div class=" pr-40">
+										<div class="">
 											<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('widget_footer_second_column') ) ?>
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-										<div class=" pr-40">
+										<div class="">
 											<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('widget_footer_third_column') ) ?>
 										</div>
 								</div>
 								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-										<div class=" pr-40">
+										<div class="">
 											<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('widget_footer_forth_column') ) ?>
 										</div>
 								</div>
