@@ -99,10 +99,10 @@
             </div>
           </div>
         </div>
-        <nav class="nav navbar navbar-default navbar-sticky bootsnav">
+        <nav class="nav navbar navbar-default navbar-sticky brand-center navbar-mobile bootsnav">
 
             <!-- Start Top Search -->
-            <div class="top-search">
+            <div class="top-search ">
                 <div class="container">
                     <?php get_search_form(); ?>
                 </div>
@@ -111,7 +111,7 @@
 
             <div class="container">
                 <!-- Start Atribute Navigation -->
-                <div class="attr-nav">
+                <div class="attr-nav sr-only">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <!-- <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li> -->
@@ -124,7 +124,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="<?php echo esc_html_e( home_url() ); ?>">
+                    <a class="navbar-brand " href="<?php echo esc_url( home_url() ); ?>">
                     <?php
                       $logo = get_theme_mod('logo', '');
                       if ( !empty($logo) ) : ?>
@@ -148,7 +148,7 @@
                        'container'         => 'div',
                        'container_class'   => 'collapse navbar-collapse ',
                         'container_id'      => 'navbar-menu',
-                       'menu_class'        => 'nav navbar-nav navbar-right',
+                       'menu_class'        => 'nav navbar-nav ',
                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                        'walker'            => new wp_bootstrap_navwalker()
                        )
