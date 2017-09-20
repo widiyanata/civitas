@@ -130,7 +130,7 @@ class Section_Category_Widget extends WP_Widget {
     <p>
       <label for="<?php echo esc_attr( $this->get_field_id( 'item-to-display' ) ); ?>"><?php esc_attr_e( 'Item to display:', 'civitas' ); ?></label>
       <input class="" id="<?php echo esc_attr( $this->get_field_id( 'item-to-display' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'item-to-display' ) ); ?>" type="number" value="<?php echo esc_attr( $item_to_display ); ?>" maxlength="5">
-      <span class="description"><?php esc_html_e('Max: 4, if  greater, then will count as 4') ?></span>
+      <span class="description"><?php esc_html_e('Max: 4, if  greater, then will count as 4', 'civitas') ?></span>
     </p>
 
 
