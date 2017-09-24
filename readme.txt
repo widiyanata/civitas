@@ -8,11 +8,9 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A WordPress theme called civitas.
-
 == Description ==
 
-WordPress theme for news and magazine blog
+WordPress theme Civitas is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
 
 == Installation ==
 

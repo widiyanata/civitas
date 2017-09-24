@@ -9,10 +9,6 @@
  * @package civitas
  */
 
- /*
-* TODO: load post dynamicly
- */
-
 ?>
   <!doctype html>
   <html <?php language_attributes(); ?>>
