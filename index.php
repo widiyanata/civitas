@@ -35,14 +35,12 @@ get_header(); ?>
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 columns">
             <?php get_template_part('section/trending', 'slider') ?>
 
-
-
 						<div class="row mb-40">
-							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 								<div class="section-title">
 									<h2 class="h6 header-color inline-block uppercase">Latest News</h2>
 								</div>
-							</div>
+							</div> -->
 						</div>
 						<div class="row">
 							<div class="posts clearfix">
