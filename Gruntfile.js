@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     // Install plugin watch -| grunt-contrib-watch
     watch: {
       js: {
-        files: ['js/*.js'],
+        files: ['assets/js/*.js'],
         tasks: ['concat:js'],
       },
     },

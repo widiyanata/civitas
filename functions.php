@@ -225,10 +225,9 @@ function civitas_scripts() {
   wp_enqueue_script( 'civitas-owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array(), '20151215', true );
   // wp_enqueue_script( 'civitas-bootsnav', get_template_directory_uri() . '/assets/js/bootsnav.js', array(), '20151215', true );
   // wp_enqueue_script( 'civitas-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
-  wp_enqueue_script( 'civitas-modernizr-js', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.8.3.min.js', array(), '20151215', true );
-	// wp_enqueue_script( 'civitas-masonry-js', "https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js", array(), '20151215', true );
-
 	wp_enqueue_script( 'civitas-minify-script', get_template_directory_uri() . '/assets/js/scripts.min.js', array(), '1.0', true );
+  wp_enqueue_script( 'civitas-modernizr-js', get_template_directory_uri() . '/assets/js/vendor/modernizr-2.8.3.min.js', array(), '20151215', true );
+
 
   wp_enqueue_script( 'civitas-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 	wp_enqueue_script( 'civitas-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
