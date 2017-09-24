@@ -8,10 +8,9 @@ module.exports = function(grunt) {
     concat: {
       js: {
         src: [
-          'assets/js/bootsnav.js',
-          'assets/js/navigation.js',
-          'assets/js/main.js',
           'assets/js/plugins.js',
+          'assets/js/bootsnav.js',
+          'assets/js/main.js',
         ],
         dest: 'assets/js/scripts.js',
       },
@@ -50,7 +49,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // load the default / All
-  grunt.registerTask('default', ['concat', 'watch']);
+  grunt.registerTask('default', ['concat','uglify', 'watch']);
 
 
 };
