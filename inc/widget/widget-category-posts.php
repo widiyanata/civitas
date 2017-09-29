@@ -7,7 +7,7 @@ class Section_Category_Widget extends WP_Widget {
     // Widget Constructor
     public function __construct(){
       parent::__construct(
-        'featured_widget', // Base ID
+        'category_widget', // Base ID
         esc_html__('Section: Category Posts Widget', 'civitas'), // Widget Name
         array(
           'description' => esc_html__('Widget to display category post', 'civitas') // Args
