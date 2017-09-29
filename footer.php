@@ -11,8 +11,6 @@
 
 ?>
 
-
-
 <!-- Start footer area -->
 <footer id="footer" class="footer-wrapper footer-1">
 		<!-- Start footer top area -->
