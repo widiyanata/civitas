@@ -30,7 +30,7 @@ class Cat_Widget_3_Col extends WP_Widget {
     public function widget( $args, $instance ) {
       echo $args['before_widget'];
 
-      echo "<div class='widget-cat-3-col'>";
+      echo "<div class='row mt-40 mb-40'><div class='widget-cat-3-col'>";
 
       // Get posts_count field
       $section_postsnr = $instance['posts_count'];
@@ -123,7 +123,7 @@ class Cat_Widget_3_Col extends WP_Widget {
         echo "</div>";
       }
 
-      echo "</div>";
+      echo "</div></div>";
       echo $args['after_widget'];
     }
 

@@ -33,7 +33,7 @@ class Section_Category_Widget extends WP_Widget {
       if ( $item_to_display > 4 ) {
         $item_to_display = 4;
       }
-      echo "<div class='widget-featured owl-active-$item_to_display'>";
+      echo "<div class='row mt-40 mb-40'><div class='widget-featured owl-active-$item_to_display'>";
 
       // Get posts_count field
       $section_postsnr = $instance['posts_count'];
@@ -85,7 +85,7 @@ class Section_Category_Widget extends WP_Widget {
         endwhile;
       endif;
 
-      echo "</div>";
+      echo "</div></div>";
       echo $args['after_widget'];
     }
 

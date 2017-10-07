@@ -18,9 +18,9 @@ get_header(); ?>
 <?php if ( is_active_sidebar( 'widget-before-post' ) ) : ?>
     <div id="before-post-widget" class="widget-area bg-gray border-bottom" role="complementary">
       <div class="container">
-        <div class="row mb-40 mt-40">
-          <?php dynamic_sidebar( 'widget-before-post' ); ?>
-        </div>
+
+        <?php dynamic_sidebar( 'widget-before-post' ); ?>
+
       </div>
     </div>
 <?php endif; ?>
