@@ -9,6 +9,32 @@
  * @package civitas
  */
 
+
+ # Logo position
+ $logo_position = get_theme_mod('logo_position', 'left');
+ # Left or Center, default = left
+ $logo_position == 'left' ? $logo_position = '' : $logo_position = 'brand-center';
+
+ # Navbar link position
+ $navbar_position = get_theme_mod('navbar_link_position', 'right');
+ # Left or Right, default = Right
+ $navbar_position == 'right' ? $navbar_position = 'navbar-right' : $navbar_position = 'navbar-left';
+
+ # If navbar logo in center then set navbar position to none;
+ $logo_position == 'brand-center' ? $navbar_position = '' : '';
+
+ # Display Top menu or not
+ $top_menu = get_theme_mod('top_menu', true);
+
+ # Breaking News Section
+ # Display Breaking News?
+ $bn = get_theme_mod('breaking_news_show');
+ # title
+ $bn_title = get_theme_mod('breaking_news_title');
+ # Show post by { latest | category }
+ $bn_option = get_theme_mod('breaking_news_option');
+ $bn_option == 'latest' ? $bn_posts = '' : $bn_posts = get_theme_mod('breaking_news_posts');
+
 ?>
   <!doctype html>
   <html <?php language_attributes(); ?>>
@@ -36,66 +62,70 @@
     <div class="wrapper">
       <!-- Start of header area -->
       <header class="header-area header-wrapper bg-white clearfix">
-        <div class="header-top-bar bg-dark ptb-10">
-          <div class="container">
-            <div class="row">
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7  hidden-xs">
-                <div class="header-top-left">
-                  <nav class="header-top-menu secondary-menu">
-                    <?php
-                    // Header Top Menu
-                      wp_nav_menu(
-                        array(
-                          'menu' => 'top-menu',
-                          'theme_location' => 'top-menu',
-                        )
-                      );
-                     ?>
-                  </nav>
+        <?php
+        # Display Top menu?
+        if ( $top_menu ) : ?>
+          <div class="header-top-bar bg-dark ptb-10">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7  hidden-xs">
+                  <div class="header-top-left">
+                    <nav class="header-top-menu secondary-menu">
+                      <?php
+                      // Header Top Menu
+                        wp_nav_menu(
+                          array(
+                            'menu' => 'top-menu',
+                            'theme_location' => 'top-menu',
+                          )
+                        );
+                       ?>
+                    </nav>
+                  </div>
                 </div>
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
-                <div class="header-top-right clierfix text-right">
-                  <!-- Social Icon: Currently Hidden -->
-                  <div class="header-social-bookmark topbar-sblock sr-only">
-                    <ul>
-                      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                      <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                      <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                      <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                    </ul>
-                  </div>
-                  <!-- /.social icon -->
-                  <div class="zmaga-calendar topbar-sblock">
-                    <span class="calendar uppercase"><?php echo current_time( get_option('date_format') ); ?></span>
-                  </div>
-                  <!-- Currently Hidden -->
-                  <div class="user-accoint topbar-sblock sr-only">
-                    <span class="login-btn uppercase">Login</span>
-                    <div class="login-form-wrap bg-white">
-                      <form class="signin-form text-left">
-                        <input type="text" class="form-control username" placeholder="Username or Email">
-                        <input type="password" class="form-control password" placeholder="Password">
-                        <input type="checkbox" value=" Remember Me" class="remember"> &nbsp;Remember Me<br>
-                        <div class="submit-box clearfix  mt-20">
-                          <input type="submit" value="Login">
-                          <input type="submit" value="Register">
-                        </div>
-                        <a href="#" class="forget">Forget username/password?</a>
-                        <div class="login-social-box">
-                          <a href="#" class="social-btn bg-facebook block"><span class="btn_text"><i class="fa fa-facebook"></i>Login with Facebook</span></a>
-                          <a href="#" class="social-btn bg-twitter block"><span class="btn_text"><i class="fa fa-twitter"></i>Login with Twitter</span></a>
-                        </div>
-                      </form>
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                  <div class="header-top-right clierfix text-right">
+                    <!-- Social Icon: Currently Hidden -->
+                    <div class="header-social-bookmark topbar-sblock sr-only">
+                      <ul>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                      </ul>
+                    </div>
+                    <!-- /.social icon -->
+                    <div class="zmaga-calendar topbar-sblock">
+                      <span class="calendar uppercase"><?php echo current_time( get_option('date_format') ); ?></span>
+                    </div>
+                    <!-- Currently Hidden -->
+                    <div class="user-accoint topbar-sblock sr-only">
+                      <span class="login-btn uppercase">Login</span>
+                      <div class="login-form-wrap bg-white">
+                        <form class="signin-form text-left">
+                          <input type="text" class="form-control username" placeholder="Username or Email">
+                          <input type="password" class="form-control password" placeholder="Password">
+                          <input type="checkbox" value=" Remember Me" class="remember"> &nbsp;Remember Me<br>
+                          <div class="submit-box clearfix  mt-20">
+                            <input type="submit" value="Login">
+                            <input type="submit" value="Register">
+                          </div>
+                          <a href="#" class="forget">Forget username/password?</a>
+                          <div class="login-social-box">
+                            <a href="#" class="social-btn bg-facebook block"><span class="btn_text"><i class="fa fa-facebook"></i>Login with Facebook</span></a>
+                            <a href="#" class="social-btn bg-twitter block"><span class="btn_text"><i class="fa fa-twitter"></i>Login with Twitter</span></a>
+                          </div>
+                        </form>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <nav class="nav navbar navbar-default navbar-sticky brand-center navbar-mobile bootsnav">
+        <?php endif; ?>
+        <nav class="nav navbar navbar-default navbar-sticky <?php echo $logo_position; ?> navbar-mobile bootsnav">
 
             <!-- Start Top Search -->
             <div class="top-search ">
@@ -144,7 +174,7 @@
                        'container'         => 'div',
                        'container_class'   => 'collapse navbar-collapse ',
                         'container_id'      => 'navbar-menu',
-                       'menu_class'        => 'nav navbar-nav ',
+                       'menu_class'        => "nav navbar-nav $navbar_position",
                        'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                        'walker'            => new wp_bootstrap_navwalker()
                        )
@@ -208,18 +238,20 @@
             </div>
           </div>
         </div>
+        <?php if ( $bn ) : ?>
         <div class="breakingnews-wrapper hidden-xs">
           <div class="container">
             <div class="row">
               <div class="col-md-12 col-lg-12 col-xs-12 col-sm-12">
                 <div class="breakingnews clearfix fix">
                   <div class="bn-title">
-                    <h6 class="uppercase">BREAKING NEWS</h6>
+                    <h6 class="uppercase"><?php echo $bn_title; ?></h6>
                   </div>
                   <div class="news-wrap">
                     <?php
                       $args = array(
                         'post_per_page' => 3,
+                        'cat'           => $bn_posts,
                       );
                       // The Query
                       $the_query = new WP_Query( $args );
@@ -244,6 +276,7 @@
             </div>
           </div>
         </div>
+        <?php endif; ?>
       </header>
       <!-- End of header area -->
 

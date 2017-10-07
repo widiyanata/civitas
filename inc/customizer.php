@@ -75,7 +75,7 @@ Wd_Civitas::add_panel( 'front', array(
  * Add the Section in Customizer for Frontpage
  */
 
-// Logo Section
+# Logo Section
 Wd_Civitas::add_section( 'logo', array(
 	'title'      => esc_attr__( 'Logo', 'civitas' ),
 	'priority'   => 1,
@@ -97,3 +97,139 @@ Wd_Civitas::add_section( 'logo', array(
 			'priority'    => 10,
 			// 'default' => 'http://placehold.it/104x120',
 		) );
+
+/**
+ * Add Panel Header Options
+ */
+Wd_Civitas::add_panel( 'header_options', array(
+	'title' => __( 'Header Options', 'civitas'),
+	'capability' => 'edit_theme_options',
+	'priority' => 1,
+) );
+
+/**
+ * Add the Section in Customizer for Frontpage
+ */
+
+# Navbar Section
+Wd_Civitas::add_section( 'navbar', array(
+	'title'      => esc_attr__( 'Navbar Options', 'civitas' ),
+	'priority'   => 1,
+	'capability' => 'edit_theme_options',
+	'panel' => 'header_options',
+) );
+
+/**
+*	Header Options Fields
+*/
+
+Wd_Civitas::add_field( 'civitas', array(
+	'type'        => 'toggle',
+	'settings'    => 'top_menu',
+	'label'       => esc_attr__( 'Display Top Bar Menu', 'civitas' ),
+	'section'     => 'navbar',
+	'default'     => '1',
+	'priority'    => 10,
+) );
+
+Wd_Civitas::add_field( 'civitas', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'logo_position',
+	'label'       => esc_attr__( 'Navbar Logo Position', 'civitas' ),
+	'section'     => 'navbar',
+	'default'     => 'left',
+	'priority'    => 10,
+	'choices'     => array(
+		'left'   => esc_attr__( 'Left', 'civitas' ),
+		'center' => esc_attr__( 'Center', 'civitas' ),
+	),
+) );
+
+Wd_Civitas::add_field( 'civitas', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'navbar_link_position',
+	'label'       => __( 'Navbar Link Position', 'civitas' ),
+	'section'     => 'navbar',
+	'default'     => 'right',
+	'priority'    => 10,
+	'choices'     => array(
+		'left'   => esc_attr__( 'Left', 'civitas' ),
+		'right' => esc_attr__( 'Right', 'civitas' ),
+	),
+) );
+
+
+# Breaking News Section
+Wd_Civitas::add_section( 'breaking_news', array(
+	'title'      => esc_attr__( 'Breaking News Options', 'civitas' ),
+	'priority'   => 1,
+	'capability' => 'edit_theme_options',
+	'panel' => 'header_options',
+) );
+
+/**
+*	Breaking News Options Fields
+*/
+
+# Show Breaking News?
+Wd_Civitas::add_field( 'civitas', array(
+	'type'        => 'toggle',
+	'settings'    => 'breaking_news_show',
+	'label'       => esc_attr__( 'Show breaking news?', 'civitas' ),
+	'section'     => 'breaking_news',
+	'default'     => '0',
+	'priority'    => 10,
+) );
+
+# Breaking news title
+Wd_Civitas::add_field( 'civitas', array(
+	'type'        => 'text',
+	'settings'    => 'breaking_news_title',
+	'label'       => esc_attr__( 'Breaking News Title', 'civitas' ),
+	'section'     => 'breaking_news',
+	'default'     => 'Breaking News',
+	'priority'    => 10,
+) );
+
+# showing post by
+Wd_Civitas::add_field( 'civitas', array(
+	'type'        => 'radio-buttonset',
+	'settings'    => 'breaking_news_option',
+	'label'       => __( 'Show posts by:', 'civitas' ),
+	'section'     => 'breaking_news',
+	'default'     => 'category',
+	'priority'    => 10,
+	'choices'     => array(
+		'latest'   => esc_attr__( 'Latest', 'civitas' ),
+		'category' => esc_attr__( 'Category', 'civitas' ),
+	),
+) );
+
+# Breaking news select post to display
+Wd_Civitas::add_field( 'civitas', array(
+	'type'        => 'select',
+	'settings'    => 'breaking_news_posts',
+	'label'       => esc_attr__( 'Breaking News Post', 'civitas' ),
+	'help'				=> esc_attr__( 'Posts to display in breaking news'),
+	'section'     => 'breaking_news',
+	'default'     => 1,
+	'priority'    => 10,
+	'choices'			=> Kirki_Helper::get_terms( 'category' ),
+	'active_callback' => 'bn_category',
+) );
+
+# Function to display field by value in breaking_news_option
+// function bn_latest( $control ) {
+//     if ( $control->manager->get_setting('breaking_news_option')->value() == 'latest' ) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+function bn_category( $control ) {
+    if ( $control->manager->get_setting('breaking_news_option')->value() == 'category' ) {
+        return true;
+    } else {
+        return false;
+    }
+}
