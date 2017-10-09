@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
-    Template Name: Civitas - HTML Magazine Template for Blogging and News Sites. 
+    Template Name: Civitas - HTML Magazine Template for Blogging and News Sites.
     Template URI: https://themeforest.net/user/nilartstudio
     Description: Civitas is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
     Author: Nilartstudio
@@ -14,8 +14,8 @@
 [  Table of contents  ]
 ================================================
 01. Avoid `console` errors in browsers that lack a console.
-02. scrollup jquery 
-04. jQuery UI / price range 
+02. scrollup jquery
+04. jQuery UI / price range
 05. WOW / scrolling animation
 06. meanMenu jquery menu plugin / mobile menu
 07. jQuery ticker
@@ -31,7 +31,7 @@
 17. Lazy Load
 18. Preloaded animation
 
- 
+
 ======================================
 [ End table content ]
 ======================================*/
@@ -65,7 +65,7 @@
 
 
 /*-------------------------------------------------------------
-    02. scrollup jquery 
+    02. scrollup jquery
 ---------------------------------------------------------------*/
 
 /*!
@@ -79,7 +79,7 @@
 
 
 /*-------------------------------------------------------------
-   04. jQuery UI / price range 
+   04. jQuery UI / price range
 ---------------------------------------------------------------*/
 
 /*! jQuery UI - v1.11.4 - 2016-06-07
@@ -124,7 +124,7 @@
 
 
 /*-------------------------------------------------------------
-  08.Youtube Video 
+  08.Youtube Video
 ---------------------------------------------------------------*/
 /*! YU2FVL - jQuery Youtube Url To FullScreen Video Lightbox - v0.1.0 - 2016-02-07
 * http://otakod.es/yu2fvl
@@ -133,7 +133,7 @@
 
 
 /*-------------------------------------------------------------
-    09. Audio player 
+    09. Audio player
 ---------------------------------------------------------------*/
 /*
     AUTHOR: Osvaldas Valutis, www.osvaldas.info
@@ -339,7 +339,7 @@
 
 
 /*-------------------------------------------------------------
-    10. Bootstrap-select 
+    10. Bootstrap-select
 ---------------------------------------------------------------*/
 
 /*!
@@ -395,7 +395,7 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
         // Validate options
         options.additionalMarginTop = parseInt(options.additionalMarginTop) || 0;
         options.additionalMarginBottom = parseInt(options.additionalMarginBottom) || 0;
-        
+
         // Add CSS
         $('head').append($('<style>.theiaStickySidebar:after {content: ""; display: table; clear: both;}</style>'));
 
@@ -421,12 +421,12 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
                 '-moz-box-sizing': 'border-box',
                 'box-sizing': 'border-box'
             });
-            
+
             // Get the sticky sidebar element. If none has been found, then create one.
             o.stickySidebar = o.sidebar.find('.theiaStickySidebar');
-            if (o.stickySidebar.length == 0) {              
+            if (o.stickySidebar.length == 0) {
                 o.sidebar.find('script').remove(); // Remove <script> tags, otherwise they will be run again on the next line.
-                o.stickySidebar = $('<div>').addClass('theiaStickySidebar').append(o.sidebar.children());               
+                o.stickySidebar = $('<div>').addClass('theiaStickySidebar').append(o.sidebar.children());
                 o.sidebar.append(o.stickySidebar);
             }
 
@@ -444,13 +444,13 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
             collapsedTopHeight -= o.stickySidebar.offset().top;
             collapsedBottomHeight = o.stickySidebar.outerHeight() - collapsedBottomHeight - collapsedTopHeight;
             if (collapsedTopHeight == 0) {
-                o.stickySidebar.css('padding-top', 0);
+                o.stickySidebar.css('padding-top', 90);
                 o.stickySidebarPaddingTop = 0;
             }
             else {
                 o.stickySidebarPaddingTop = 1;
             }
-            
+
             if (collapsedBottomHeight == 0) {
                 o.stickySidebar.css('padding-bottom', 0);
                 o.stickySidebarPaddingBottom = 0;
@@ -465,16 +465,16 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
             // Scroll top (value) when the sidebar has fixed position.
             o.fixedScrollTop = 0;
 
-            o.onScroll = function(o) {              
+            o.onScroll = function(o) {
                 // Stop if the sidebar isn't visible.
                 if (!o.stickySidebar.is(":visible")) {
                     return;
-                }               
-                
+                }
+
                 // Stop if the window is too small.
                 if ($('body').width() < o.options.minWidth) {
                     resetSidebar();
-                    return;                 
+                    return;
                 }
 
                 // Stop if the sidebar width is larger than the container width (e.g. the theme is responsive and the sidebar is now below the content)
@@ -491,15 +491,15 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
                     // The top and bottom offsets, used in various calculations.
                     var offsetTop = o.paddingTop + o.marginTop + options.additionalMarginTop;
                     var offsetBottom =  o.paddingBottom + o.marginBottom + options.additionalMarginBottom;
-                    
+
                     // All top and bottom positions are relative to the window, not to the parent elemnts.
                     var containerTop = o.container.offset().top;
                     var containerBottom = o.container.offset().top + getClearedHeight(o.container);
-                    
+
                     // The top and bottom offsets relative to the window screen top (zero) and bottom (window height).
                     var windowOffsetTop = 0 + options.additionalMarginTop;
                     var windowOffsetBottom;
-                    
+
                     var sidebarSmallerThanWindow = (o.stickySidebar.outerHeight() + offsetTop + offsetBottom) < $(window).height();
                     if (sidebarSmallerThanWindow) {
                         windowOffsetBottom = windowOffsetTop + o.stickySidebar.outerHeight();
@@ -507,18 +507,18 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
                     else {
                         windowOffsetBottom = $(window).height() - o.marginBottom - o.paddingBottom - options.additionalMarginBottom;
                     }
-                    
+
                     var staticLimitTop = containerTop - scrollTop + o.paddingTop + o.marginTop;
                     var staticLimitBottom = containerBottom - scrollTop - o.paddingBottom - o.marginBottom;
 
                     var top = o.stickySidebar.offset().top - scrollTop;
                     var scrollTopDiff = o.previousScrollTop - scrollTop;
-                    
+
                     // If the sidebar position is fixed, then it won't move up or down by itself. So, we manually adjust the top coordinate.
                     if (o.stickySidebar.css('position') == 'fixed') {
                         top += scrollTopDiff;
                     }
-                    
+
                     if (scrollTopDiff > 0) { // If the user is scrolling up.
                         top = Math.min(top, windowOffsetTop);
                     }
@@ -529,7 +529,7 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
                     top = Math.max(top, staticLimitTop);
 
                     top = Math.min(top, staticLimitBottom - o.stickySidebar.outerHeight());
-                    
+
                     if (top == windowOffsetTop) {
                         position = 'fixed';
                     }
@@ -569,7 +569,7 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
                             'top': scrollTop + top - o.sidebar.offset().top - o.stickySidebarPaddingTop - o.stickySidebarPaddingBottom
                         });
                     }
-                
+
                     o.stickySidebar.css({
                         'width': o.sidebar.width(),
                         'left': ''
@@ -586,7 +586,7 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
                         });
                     }
                 }
-                
+
                 o.previousScrollTop = scrollTop;
             };
 
