@@ -6,7 +6,7 @@
 
 $args = array(
   'posts_per_page' => 2,
-  // 'post__in' => get_option('sticky_posts'),
+  'post__in' => get_option('sticky_posts'),
 );
 
 $query = new WP_Query( $args );
@@ -16,8 +16,8 @@ $query = new WP_Query( $args );
 if ( $query->have_posts() ) { ?>
 
   <!-- Start trending post -->
-  <div class="trending-post-area owl-trending bg-dark controls-1 mb-70">
-
+  <div class="owl-trending bg-dark controls-1 mb-70">
+    <!-- trending-post-area  -->
     <?php while ( $query->have_posts() ) {
       $query->the_post();
     ?>

@@ -30,6 +30,9 @@
 if ( is_home() ) : ?>
 <!-- Start trending post area -->
 <div class="trending-post-area">
+  <div class="trending-header">
+    <h3><?php echo esc_attr__('Trending Now', 'civitas'); ?></h3>
+  </div>
   <div class="container-fluid">
     <div class="row">
       <div class="trend-post-list lay-c-wrap posts clearfix">

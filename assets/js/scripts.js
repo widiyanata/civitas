@@ -1675,7 +1675,7 @@ return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r
     --------------------------------------------- */
     var owl = $('.owl-active-1');
     owl.owlCarousel({
-        items:5,
+        items:1,
         loop:true,
         autoplay:true,
         autoplayTimeout:4000,
@@ -1686,22 +1686,22 @@ return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r
             items:1,
         },
         480 : {
-            items:2,
+            items:1,
         },
         768 : {
-            items:2,
+            items:1,
         },
         992 : {
-            items:3,
+            items:1,
         },
         1167 : {
-            items:4,
+            items:1,
         },
         1366 : {
-            items:4,
+            items:1,
         },
         1400 : {
-            items:5,
+            items:1,
         }
     }
     });
@@ -1711,7 +1711,7 @@ return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r
     --------------------------------------------- */
     var owl = $('.owl-active-2');
     owl.owlCarousel({
-        items:5,
+        items:2,
         loop:true,
         autoplay:true,
         autoplayTimeout:4000,

@@ -111,22 +111,33 @@ Wd_Civitas::add_panel( 'header_options', array(
  * Add the Section in Customizer for Frontpage
  */
 
-	# Navbar Section
-	Wd_Civitas::add_section( 'navbar', array(
-		'title'      => esc_attr__( 'Navbar Options', 'civitas' ),
-		'priority'   => 1,
-		'capability' => 'edit_theme_options',
-		'panel' => 'header_options',
-	) );
+# Navbar Section
+Wd_Civitas::add_section( 'navbar', array(
+	'title'      => esc_attr__( 'Navbar Options', 'civitas' ),
+	'priority'   => 1,
+	'capability' => 'edit_theme_options',
+	'panel' => 'header_options',
+) );
 
 	/**
 	*	Header Options Fields
 	*/
 
+	# Display top menu?
 	Wd_Civitas::add_field( 'civitas', array(
 		'type'        => 'toggle',
 		'settings'    => 'top_menu',
 		'label'       => esc_attr__( 'Display Top Bar Menu', 'civitas' ),
+		'section'     => 'navbar',
+		'default'     => '1',
+		'priority'    => 10,
+	) );
+
+	# Sticky navbar?
+	Wd_Civitas::add_field( 'civitas', array(
+		'type'        => 'toggle',
+		'settings'    => 'navbar_sticky',
+		'label'       => esc_attr__( 'Sticky Navbar', 'civitas' ),
 		'section'     => 'navbar',
 		'default'     => '1',
 		'priority'    => 10,
@@ -158,13 +169,13 @@ Wd_Civitas::add_panel( 'header_options', array(
 		),
 	) );
 
-	# Breaking News Section
-	Wd_Civitas::add_section( 'breaking_news', array(
-		'title'      => esc_attr__( 'Breaking News Options', 'civitas' ),
-		'priority'   => 1,
-		'capability' => 'edit_theme_options',
-		'panel' => 'header_options',
-	) );
+# Breaking News Section
+Wd_Civitas::add_section( 'breaking_news', array(
+	'title'      => esc_attr__( 'Breaking News Options', 'civitas' ),
+	'priority'   => 1,
+	'capability' => 'edit_theme_options',
+	'panel' => 'header_options',
+) );
 
 	/**
 	*	Breaking News Options Fields
@@ -218,13 +229,6 @@ Wd_Civitas::add_panel( 'header_options', array(
 	) );
 
 	# Function to display field by value in breaking_news_option
-	// function bn_latest( $control ) {
-	//     if ( $control->manager->get_setting('breaking_news_option')->value() == 'latest' ) {
-	//         return true;
-	//     } else {
-	//         return false;
-	//     }
-	// }
 	function bn_category( $control ) {
 	    if ( $control->manager->get_setting('breaking_news_option')->value() == 'category' ) {
 	        return true;
@@ -232,6 +236,29 @@ Wd_Civitas::add_panel( 'header_options', array(
 	        return false;
 	    }
 	}
+
+# Middle Header Section
+Wd_Civitas::add_section( 'middle_header', array(
+	'title'      => esc_attr__( 'Middle Header Options', 'civitas' ),
+	'priority'   => 1,
+	'capability' => 'edit_theme_options',
+	'panel' => 'header_options',
+) );
+
+	/**
+	*	Middle Header Options Fields
+	*/
+
+	# Show Middle Header?
+	Wd_Civitas::add_field( 'civitas', array(
+		'type'        => 'toggle',
+		'settings'    => 'middle_header_option',
+		'label'       => esc_attr__( 'Show Middle Header?', 'civitas' ),
+		'description'       => esc_attr__( 'Only Hide the view; not affect to search engine.', 'civitas' ),
+		'section'     => 'middle_header',
+		'default'     => '1',
+		'priority'    => 10,
+	) );
 
 /**
  * Add Panel Ads Manager

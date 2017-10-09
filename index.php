@@ -14,6 +14,9 @@
 
 get_header(); ?>
 
+<!-- Get Trending Post , after breaking news.  -->
+<?php get_template_part('section-templates/trending', '') ?>
+
 <!-- Before post widget area -->
 <?php if ( is_active_sidebar( 'widget-before-post' ) ) : ?>
     <div id="before-post-widget" class="widget-area bg-gray border-bottom" role="complementary">
@@ -33,7 +36,14 @@ get_header(); ?>
 
 					<!-- Start left side -->
 					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 columns">
-            <?php get_template_part('section/trending', 'slider') ?>
+            <div class="advertisement">
+							<div class="row mb-40">
+								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+									<a href="#"><img src="http://placehold.it/800x150" alt=""></a>
+								</div>
+							</div>
+						</div>
+            <?php get_template_part('section-templates/trending', 'slider') ?>
 
 						<div class="row mb-40">
 							<!-- <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

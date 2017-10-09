@@ -29,7 +29,12 @@ class Popular_Widget extends WP_Widget {
         echo $args['before_title'] . apply_filters('widget_title', $instance['title']) . $args['after_title'];
       }
 
-      echo "<ul class='widget-popular'>";
+      $item_to_display = $instance['item-to-display'];
+      if ( $item_to_display > 4 ) {
+        $item_to_display = 4;
+      }
+
+      echo "<ul class='widget-popular owl-active-$item_to_display'>";
 
       // Get posts_count field
       $section_postsnr = $instance['posts_count'];
@@ -87,6 +92,7 @@ class Popular_Widget extends WP_Widget {
     public function form( $instance ) {
       $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'civitas' );
       $posts_count = ! empty( $instance['posts_count'] ) ? $instance['posts_count'] : 5;
+      $item_to_display = ! empty( $instance['item-to-display'] ) ? $instance['item-to-display'] : '';
   		?>
   		<p>
     		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'civitas' ); ?></label>
@@ -97,6 +103,13 @@ class Popular_Widget extends WP_Widget {
       <p>
         <label for="<?php echo $this->get_field_id('posts_count'); ?>"><?php esc_html_e('How many posts?', 'civitas') ?></label>
         <input type="number" name="<?php echo esc_attr( $this->get_field_name('posts_count') ); ?>" value="<?php echo esc_attr( $posts_count ); ?>" id="<?php echo $this->get_field_id('posts_count'); ?>">
+      </p>
+      <!-- Number of item to display -->
+      <p>
+        <label for="<?php echo esc_attr( $this->get_field_id( 'item-to-display' ) ); ?>"><?php esc_attr_e( 'Item to display:', 'civitas' ); ?></label>
+        <input class="" id="<?php echo esc_attr( $this->get_field_id( 'item-to-display' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'item-to-display' ) ); ?>" type="number" value="<?php echo esc_attr( $item_to_display ); ?>" maxlength="5">
+        <span class="description"><?php esc_html_e('Max: 4, if  greater, then will count as 4', 'civitas') ?></span>
+        <p class="description"><?php esc_html_e('To disable owl carousel, set to none (empty)', 'civitas') ?></p>
       </p>
 
   		<?php
@@ -120,6 +133,8 @@ class Popular_Widget extends WP_Widget {
 
       // New field : post count
       $instance['posts_count'] = ( !empty( $new_instance['posts_count'] ) ) ? strip_tags( $new_instance['posts_count'] ) :'5';
+
+      $instance['item-to-display'] = ( !empty( $new_instance['item-to-display'] ) ) ? strip_tags( $new_instance['item-to-display'] ) :'';
 
   		return $instance;
     }

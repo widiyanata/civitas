@@ -33,8 +33,7 @@ class Section_Category_Widget extends WP_Widget {
       if ( $item_to_display > 4 ) {
         $item_to_display = 4;
       }
-      echo "<div class='row mt-40 mb-40'><div class='widget-featured owl-active-$item_to_display'>";
-
+      echo "<div class='row mt-40 mb-40 mr-0 ml-0'><div class='widget-featured owl-active-$item_to_display'>";
       // Get posts_count field
       $section_postsnr = $instance['posts_count'];
 
@@ -53,6 +52,7 @@ class Section_Category_Widget extends WP_Widget {
 
       // The Query
       $query_posts = new WP_Query( $query_args );
+
       $i = 0;
       if( $query_posts->have_posts()) :
         while ( $query_posts->have_posts() ) :
@@ -100,7 +100,7 @@ class Section_Category_Widget extends WP_Widget {
       $title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'New title', 'civitas' );
       $posts_count = ! empty( $instance['posts_count'] ) ? $instance['posts_count'] : 5;
       $item_to_display = ! empty( $instance['item-to-display'] ) ? $instance['item-to-display'] : 4;
-      $cat = ! empty( $instance['car_widget'] ) ? $instance['cat_widget'] : '';
+      $cat = ! empty( $instance['cat_widget'] ) ? $instance['cat_widget'] : '';
   		?>
   		<p>
     		<label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_attr_e( 'Title:', 'civitas' ); ?></label>
@@ -151,7 +151,7 @@ class Section_Category_Widget extends WP_Widget {
       // processes widget options on save
       $instance = $old_instance;
   		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-      $instance['cat_widget'] = absint( $new_instance['cat_widget'] );
+      $instance['cat_widget'] = $new_instance['cat_widget'];
 
       // New field : post count
       $instance['posts_count'] = ( !empty( $new_instance['posts_count'] ) ) ? strip_tags( $new_instance['posts_count'] ) :'5';

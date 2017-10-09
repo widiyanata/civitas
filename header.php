@@ -12,28 +12,36 @@
 
  # Logo position
  $logo_position = get_theme_mod('logo_position', 'left');
- # Left or Center, default = left
- $logo_position == 'left' ? $logo_position = '' : $logo_position = 'brand-center';
-
- # Navbar link position
- $navbar_position = get_theme_mod('navbar_link_position', 'right');
- # Left or Right, default = Right
- $navbar_position == 'right' ? $navbar_position = 'navbar-right' : $navbar_position = 'navbar-left';
-
- # If navbar logo in center then set navbar position to none;
- $logo_position == 'brand-center' ? $navbar_position = '' : '';
+   # Left or Center, default = left
+   $logo_position == 'left' ? $logo_position = '' : $logo_position = 'brand-center';
 
  # Display Top menu or not
  $top_menu = get_theme_mod('top_menu', true);
 
+ # Sticky Navbar
+ $sticky_navbar = get_theme_mod('navbar_sticky');
+  $sticky_navbar == true ? $sticky_class = 'navbar-sticky' : $sticky_class = '';
+
+ # Navbar link position
+ $navbar_position = get_theme_mod('navbar_link_position', 'right');
+   # Left or Right, default = Right
+   $navbar_position == 'right' ? $navbar_position = 'navbar-right' : $navbar_position = 'navbar-left';
+
+ # If navbar logo in center then set navbar position to none;
+ $logo_position == 'brand-center' ? $navbar_position = '' : '';
+
+ # Middle Header
+ # Display or Not?
+ $middle_header = get_theme_mod('middle_header_option');
+
  # Breaking News Section
  # Display Breaking News?
  $bn = get_theme_mod('breaking_news_show');
- # title
- $bn_title = get_theme_mod('breaking_news_title');
- # Show post by { latest | category }
- $bn_option = get_theme_mod('breaking_news_option');
- $bn_option == 'latest' ? $bn_posts = '' : $bn_posts = get_theme_mod('breaking_news_posts');
+   # title
+   $bn_title = get_theme_mod('breaking_news_title');
+   # Show post by { latest | category }
+   $bn_option = get_theme_mod('breaking_news_option');
+   $bn_option == 'latest' ? $bn_posts = '' : $bn_posts = get_theme_mod('breaking_news_posts');
 
 ?>
   <!doctype html>
@@ -125,7 +133,7 @@
             </div>
           </div>
         <?php endif; ?>
-        <nav class="nav navbar navbar-default navbar-sticky <?php echo $logo_position; ?> navbar-mobile bootsnav">
+        <nav class="nav navbar navbar-default <?php echo $logo_position; echo $sticky_class; ?> navbar-mobile bootsnav">
 
             <!-- Start Top Search -->
             <div class="top-search ">
@@ -136,14 +144,16 @@
             <!-- End Top Search -->
 
             <div class="container">
+              <?php if ( $logo_position == '' ) : ?>
                 <!-- Start Atribute Navigation -->
-                <div class="attr-nav sr-only">
+                <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <!-- <li class="side-menu"><a href="#"><i class="fa fa-bars"></i></a></li> -->
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
+              <?php endif; ?>
 
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
@@ -166,7 +176,6 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <?php
-
                    wp_nav_menu( array(
                        'menu'              => 'menu-1',
                        'theme_location'    => 'primary',
@@ -179,11 +188,14 @@
                        'walker'            => new wp_bootstrap_navwalker()
                        )
                    );
-                       ?>
+                ?>
 
             </div>
 
         </nav>
+        <?php
+        # Show middle header area
+        if ( $middle_header ) : ?>
         <div class="header-middle-area">
           <div class="container">
             <div class="row">
@@ -238,7 +250,10 @@
             </div>
           </div>
         </div>
-        <?php if ( $bn ) : ?>
+        <?php endif; ?>
+        <?php
+        # Display breaking news area
+        if ( $bn ) : ?>
         <div class="breakingnews-wrapper hidden-xs">
           <div class="container">
             <div class="row">
@@ -279,25 +294,3 @@
         <?php endif; ?>
       </header>
       <!-- End of header area -->
-
-
-        <a class="skip-link screen-reader-text" href="#content">
-          <?php esc_html_e( 'Skip to content', 'civitas' ); ?>
-        </a>
-        <!-- Original Header -->
-        <header id="masthead" class="site-header sr-only">
-          <nav id="site-navigation" class="main-navigation">
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'civitas' ); ?></button>
-            <?php
-      				// wp_nav_menu( array(
-      				// 	'theme_location' => 'menu-1',
-      				// 	'menu_id'        => 'primary-menu',
-      				// ) );
-      			?>
-          </nav>
-          <!-- #site-navigation -->
-        </header>
-        <!-- #masthead -->
-
-        <!-- Get Trending Post Slider, after breaking news.  -->
-        <?php get_template_part('section/trending', '') ?>
