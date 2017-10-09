@@ -7,15 +7,15 @@ class Cat_Widget_3_Col extends WP_Widget {
     // Widget Constructor
     public function __construct(){
 
-      $control_ops = array( 'width' => NULL, 'height' => NULL, 'id_base' => 'cv-widget' );
+      // $control_ops = array( 'width' => NULL, 'height' => NULL, 'id_base' => 'cv-widget' );
       parent::__construct(
         'cat-widget-3-col', // Base ID
         esc_html__('Section: 3 Columns Category', 'civitas'), // Widget Name
         array(
-          'classname' => 'custom_widget',
+          // 'classname' => 'custom_widget',
           'description' => esc_html__('Widget to display posts by category, please please do not add this to widget sidebar', 'civitas') // Args
-        ),
-        $control_ops
+        )
+        // $control_ops
       );
     }
 
@@ -235,15 +235,15 @@ class Cat_Widget_3_Col extends WP_Widget {
     public function update( $new_instance, $old_instance ) {
       // processes widget options on save
       $instance = $old_instance;
-  		$instance['title-1'] = ( ! empty( $new_instance['title-1'] ) ) ? strip_tags( $new_instance['title-1'] ) : '';
-      $instance['title-2'] = ( ! empty( $new_instance['title-2'] ) ) ? strip_tags( $new_instance['title-2'] ) : '';
-      $instance['title-3'] = ( ! empty( $new_instance['title-3'] ) ) ? strip_tags( $new_instance['title-3'] ) : '';
+  		$instance['title-1'] = ! empty( $new_instance['title-1'] ) ? strip_tags( $new_instance['title-1'] ) : '';
+      $instance['title-2'] = ! empty( $new_instance['title-2'] ) ? strip_tags( $new_instance['title-2'] ) : '';
+      $instance['title-3'] = ! empty( $new_instance['title-3'] ) ? strip_tags( $new_instance['title-3'] ) : '';
       $instance['cat_widget_col_1'] = absint( $new_instance['cat_widget_col_1'] );
       $instance['cat_widget_col_2'] = absint( $new_instance['cat_widget_col_2'] );
       $instance['cat_widget_col_3'] = absint( $new_instance['cat_widget_col_3'] );
 
       // New field : post count
-      $instance['posts_count'] = ( !empty( $new_instance['posts_count'] ) ) ? strip_tags( $new_instance['posts_count'] ) :'5';
+      $instance['posts_count'] = !empty( $new_instance['posts_count'] ) ? strip_tags( $new_instance['posts_count'] ) :'5';
 
   		return $instance;
     }
