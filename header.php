@@ -133,7 +133,7 @@
             </div>
           </div>
         <?php endif; ?>
-        <nav class="nav navbar navbar-default <?php echo $logo_position; echo $sticky_class; ?> navbar-mobile bootsnav">
+        <nav class="nav navbar navbar-default <?php echo $logo_position; ?> <?php echo $sticky_class; ?> navbar-mobile bootsnav">
 
             <!-- Start Top Search -->
             <div class="top-search ">

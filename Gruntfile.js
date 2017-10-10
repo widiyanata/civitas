@@ -14,6 +14,12 @@ module.exports = function(grunt) {
         ],
         dest: 'assets/js/scripts.js',
       },
+      css: {
+        src: [
+          'assets/css/shortcode/*.css',
+        ],
+        dest: 'assets/css/shortcode.css',
+      },
     },
 
     // Watch the changes

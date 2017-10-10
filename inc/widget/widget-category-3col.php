@@ -12,7 +12,7 @@ class Cat_Widget_3_Col extends WP_Widget {
         'cat-widget-3-col', // Base ID
         esc_html__('Section: 3 Columns Category', 'civitas'), // Widget Name
         array(
-          // 'classname' => 'custom_widget',
+          'classname' => 'custom_widget',
           'description' => esc_html__('Widget to display posts by category, please please do not add this to widget sidebar', 'civitas') // Args
         )
         // $control_ops
