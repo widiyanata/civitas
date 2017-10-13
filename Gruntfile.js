@@ -16,9 +16,13 @@ module.exports = function(grunt) {
       },
       css: {
         src: [
-          'assets/css/shortcode/*.css',
+          'assets/css/bootstrap.min.css',
+          'assets/css/font-awesome.min.css',
+          'assets/css/plugin.css',
+          'assets/css/shortcode.css',
+          'assets/css/style.css',
         ],
-        dest: 'assets/css/shortcode.css',
+        dest: 'assets/css/main.css',
       },
     },
 
@@ -35,9 +39,9 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          'assets/js/scripts.min.js':
+          'assets/css/main.min.css':
           [
-            'assets/js/scripts.js',
+            'assets/css/main.css',
           ]
         }
       }
