@@ -3315,7 +3315,7 @@ Copyright (c) 2015 Daniel Eden
 ----------------------------------------------*/
 /* Preload images */
 body:after {
-  content: url(../../images/icons/close.png) url(../../images/icons/loading.gif) url(../../images/icons/prev.png) url(../../images/icons/next.png);
+  content: url(../images/icons/close.png) url(../images/icons/loading.gif) url(../images/icons/prev.png) url(../images/icons/next.png);
   display: none;
 }
 
