@@ -61,7 +61,7 @@ class Cat_Widget_3_Col extends WP_Widget {
         // The Query
         $query_posts = new WP_Query( $query_args  );
         $c = 0;
-        if( $query_posts->have_posts()) :
+        if( $query_posts->have_posts() && $query_posts->found_posts > 0 ) :
           while ( $query_posts->have_posts() ) :
             $query_posts->the_post();
             $c++;
@@ -113,11 +113,10 @@ class Cat_Widget_3_Col extends WP_Widget {
             </article>
         <?php  } // end else ?>
 
-
-
-
             <?php
           endwhile;
+        else :
+          echo esc_attr__('No post found!');
         endif;
 
         echo "</div>";

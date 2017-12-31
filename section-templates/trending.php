@@ -9,6 +9,11 @@
   // The Query
   $the_query = new WP_Query( $args );
 
+  // Get posts count, if less than 4 then do not display
+  if ( $the_query->found_posts > 4 ) {
+    $count = true;
+  }
+
   // The Loop
   if ( $the_query->have_posts() ) {
 
@@ -27,7 +32,7 @@
     wp_reset_postdata();
   }
 
-if ( is_home() ) : ?>
+if ( is_home() && $count ) : ?>
 <!-- Start trending post area -->
 <div class="trending-post-area">
   <div class="trending-header">

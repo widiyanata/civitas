@@ -260,6 +260,29 @@ Wd_Civitas::add_section( 'middle_header', array(
 		'priority'    => 10,
 	) );
 
+# Trending Posts
+Wd_Civitas::add_section( 'trending_posts', array(
+	'title'      => esc_attr__( 'Trending Posts Options', 'civitas' ),
+	'priority'   => 1,
+	'capability' => 'edit_theme_options',
+	'panel' => 'header_options',
+) );
+
+	/**
+	*	Middle Header Options Fields
+	*/
+
+	# Show Middle Header?
+	Wd_Civitas::add_field( 'civitas', array(
+		'type'        => 'toggle',
+		'settings'    => 'trending_post_option',
+		'label'       => esc_attr__( 'Show Trending Posts?', 'civitas' ),
+		'section'     => 'trending_posts',
+		'default'     => '0',
+		'priority'    => 10,
+	) );
+
+
 /**
  * Add Panel Ads Manager
  */

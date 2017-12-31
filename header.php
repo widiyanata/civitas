@@ -19,7 +19,7 @@
  $top_menu = get_theme_mod('top_menu', true);
 
  # Sticky Navbar
- $sticky_navbar = get_theme_mod('navbar_sticky');
+ $sticky_navbar = get_theme_mod('navbar_sticky', true);
   $sticky_navbar == true ? $sticky_class = 'navbar-sticky' : $sticky_class = '';
 
  # Navbar link position
@@ -32,13 +32,13 @@
 
  # Middle Header
  # Display or Not?
- $middle_header = get_theme_mod('middle_header_option');
+ $middle_header = get_theme_mod('middle_header_option', true);
 
  # Breaking News Section
  # Display Breaking News?
  $bn = get_theme_mod('breaking_news_show');
    # title
-   $bn_title = get_theme_mod('breaking_news_title');
+   $bn_title = get_theme_mod('breaking_news_title', 'Lastest');
    # Show post by { latest | category }
    $bn_option = get_theme_mod('breaking_news_option');
    $bn_option == 'latest' ? $bn_posts = '' : $bn_posts = get_theme_mod('breaking_news_posts');

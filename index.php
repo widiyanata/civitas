@@ -12,7 +12,10 @@
  * @package civitas
  */
 
-get_header(); ?>
+get_header();
+
+// $trending =
+ ?>
 
 <!-- Get Trending Post , after breaking news.  -->
 <?php get_template_part('section-templates/trending', '') ?>

@@ -20,7 +20,6 @@ module.exports = function(grunt) {
           'assets/css/font-awesome.min.css',
           'assets/css/plugin.css',
           'assets/css/shortcode.css',
-          'assets/css/style.css',
         ],
         dest: 'assets/css/main.css',
       },

@@ -3,6 +3,14 @@
 /*----------------------------------------*/
 
 /*
+* General
+*/
+
+img {
+  height: auto;
+}
+
+/*
 * Trending post area
 */
 
@@ -29,4 +37,64 @@
 
 .trending-post-area:hover .trending-header {
     left: 0;
+}
+
+
+/* display none category button*/
+.cat-btn {
+	display: none;
+}
+
+/* News Section, Home */
+#articles .post-thumb img {
+    max-height: 200px;
+    min-height: 200px;
+}
+
+#articles .post-title {
+	font-size: 16px;
+}
+
+/* Owl Slider */
+.trending-post-area .post-thumb img {
+	max-height: 400px;
+}
+
+.owl-trending .post-thumb img {
+	max-height: 400px;
+}
+
+.trending .post-thumb img {
+	max-height: 200px;
+}
+
+
+/*--------------------------------------------------------------
+## Post Single
+--------------------------------------------------------------*/
+
+/* Post navigation */
+.nav-previous, .nav-next {
+    padding: 10px 0;
+		margin-bottom: 20px;
+}
+
+.nav-previous {
+    border-left: 5px solid #f0442c;
+		padding-left: 10px;
+}
+
+.nav-next {
+    border-right: 5px solid #303030;
+    padding-right: 10px;
+}
+
+/*--------------------------------------------------------------
+## Post Archive
+--------------------------------------------------------------*/
+
+.entry-footer span a {
+    color: #f0442c;
+    font-weight: bold;
+    padding: 7px;
 }
