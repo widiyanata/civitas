@@ -35,16 +35,16 @@ module.exports = function(grunt) {
     },
 
     // Minify Script
-    uglify: {
-      my_target: {
-        files: {
-          'assets/css/main.min.css':
-          [
-            'assets/css/main.css',
-          ]
-        }
-      }
-    }
+    // uglify: {
+    //   my_target: {
+    //     files: {
+    //       'assets/css/main.min.css':
+    //       [
+    //         'assets/css/main.css',
+    //       ]
+    //     }
+    //   }
+    // }
 
   });
 
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
   // load the default / All
-  grunt.registerTask('default', ['concat','uglify', 'watch']);
+  grunt.registerTask('default', ['concat', 'watch']);
 
 
 };
