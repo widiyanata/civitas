@@ -9,6 +9,7 @@
 }
 .widget ul {
   list-style: none;
+  padding: 0;
 }
 .widget-title {
     font-size: 1.5em;

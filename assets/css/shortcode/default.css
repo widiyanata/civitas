@@ -1,32 +1,30 @@
 /*-----------------------------------------------------------------------------------
-  
-Template Name: Civitas - HTML Magazine Template for Blogging and News Sites. 
+
+Template Name: Civitas - HTML Magazine Template for Blogging and News Sites.
 Template URI: https://themeforest.net/user/nilartstudio
 Description: Civitas is a unique website template designed in html with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design blog, magazine, news site or any other purposes websites.
 Author: Nilartstudio
 Author URI: http://Nilartstudio.com
 Version: 1.0
 
-NOTE: This is main style sheet of template, 
-This file contains the styling for the actual Template. 
+NOTE: This is main style sheet of template,
+This file contains the styling for the actual Template.
 Please do not change anything here! write in a custom.css file if required!
 
 -----------------------------------------------------------------------------------*/
 
 
- 
+
 /*======================================
 
 [  Table of contents  ]
 
-
- 1. Reset
- 2. Helper Classes
- 3. Typography
- 4. Typography Helpers
- 5. Position
- 6. Transtion
- 7. Image
+ 1. Helper Classes
+ 2. Typography
+ 3. Typography Helpers
+ 4. Position
+ 5. Transtion
+ 6. Image
  7. Colors
  8. Background variation
  9. Background overlay
@@ -44,23 +42,7 @@ Basic margin padding
 [ End table content ]
 ======================================*/
 
-
-/**! 1. Reset **/
-*,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-a {
-  margin: 0;
-  padding: 0;
-}
-
-/**! 2. Helper Classes **/
+/**! 1. Helper Classes **/
 .fix {
     overflow: hidden
 }
@@ -210,10 +192,10 @@ h6 a {
     color: inherit
 }
 /*! Typography Helpers */
-.uppercase { 
+.uppercase {
     text-transform: uppercase
 }
-.capitalize { 
+.capitalize {
     text-transform: capitalize
 }
 .type-bold {
@@ -486,8 +468,8 @@ body {
 .bg-dark ul,
 .bg-dark i,
 .bg-dark a:not(.btn),
-.bg-dark h1:not(.post-title) a, 
-.bg-dark a:not(.forget), 
+.bg-dark h1:not(.post-title) a,
+.bg-dark a:not(.forget),
 .bg-dark h2:not(.post-title) a {
   color: #c1c1c1;
 }
@@ -496,8 +478,8 @@ body {
 .bg-dark .text-white ul,
 .bg-dark .text-white i,
 .bg-dark .text-white a,
-.bg-dark .text-white h1 a, 
-.bg-dark .text-white a, 
+.bg-dark .text-white h1 a,
+.bg-dark .text-white a,
 .bg-dark .text-white h2 a {
   color: #fff;
 }
@@ -520,8 +502,8 @@ body {
 .bg-black ul,
 .bg-black i,
 .bg-black a:not(.btn),
-.bg-black h1:not(.post-title) a, 
-.bg-black h2:not(.post-title) a, 
+.bg-black h1:not(.post-title) a,
+.bg-black h2:not(.post-title) a,
 .bg-black h3:not(.post-title) a  {
   color: #c1c1c1;
 }
@@ -698,8 +680,8 @@ body {
 
 .text-white h1, .text-white p, .text-white h2, .text-white a{ color: #fff; }
 
-.text-white h1, .text-white p, .text-white h2, .text-white a{ 
-  color: #fff; 
+.text-white h1, .text-white p, .text-white h2, .text-white a{
+  color: #fff;
 }
 .bg-gray article:not(.trending-post) .text-white h1, .bg-gray article:not(.trending-post) .text-white p, .bg-gray article:not(.trending-post) .text-white h2, .bg-gray article:not(.trending-post) .text-white a, .bg-gray article:not(.trending-post) .text-white li{
   color: #363636;
@@ -849,19 +831,19 @@ body {
     height: 50%;
     background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #2f2f2f 100%);
     /* FF3.6+ */
-    
+
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, #2f2f2f));
     /* Chrome,Safari4+ */
-    
+
     background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #2f2f2f 100%);
     /* Chrome10+,Safari5.1+ */
-    
+
     background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #2f2f2f 100%);
     /* Opera 11.10+ */
-    
+
     background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, #2f2f2f 100%);
     /* IE10+ */
-    
+
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #2f2f2f 100%);
     bottom: 0;
     left: 0;
@@ -924,19 +906,19 @@ body {
     height: 50%;
     background: -moz-linear-gradient(bottom, #2f2f2f 0%, rgba(0, 0, 0, 0) 100%);
     /* FF3.6+ */
-    
+
     background: -webkit-gradient(linear, left bottom, left bottom, color-stop(0%, #2f2f2f), color-stop(100%, rgba(0, 0, 0, 0)));
     /* Chrome,Safari4+ */
-    
+
     background: -webkit-linear-gradient(bottom, #2f2f2f 0%, rgba(0, 0, 0, 0) 100%);
     /* Chrome10+,Safari5.1+ */
-    
+
     background: -o-linear-gradient(bottom, #2f2f2f 0%, rgba(0, 0, 0, 0) 100%);
     /* Opera 11.10+ */
-    
+
     background: -ms-linear-gradient(bottom, #2f2f2f 0%, rgba(0, 0, 0, 0) 100%);
     /* IE10+ */
-    
+
     background: linear-gradient(to bottom, #2f2f2f 0%, rgba(0, 0, 0, 0) 100%);
     top: 0;
     left: 0;
@@ -992,18 +974,18 @@ body {
     z-index: 1;
 }
 
-[data-dark-overlay]:before, 
-[data-overlay]:before, 
-[data-overlay]:before, 
-[data-scrim-top]:after, 
+[data-dark-overlay]:before,
+[data-overlay]:before,
+[data-overlay]:before,
+[data-scrim-top]:after,
 [data-scrim-buttom]:after {
     z-index: 1;
 }
 
-[data-dark-overlay].post-dis, 
-[data-overlay] .post-dis, 
-[data-overlay] .post-dis, 
-[data-scrim-top] .post-dis, 
+[data-dark-overlay].post-dis,
+[data-overlay] .post-dis,
+[data-overlay] .post-dis,
+[data-scrim-top] .post-dis,
 [data-scrim-buttom] .post-dis {
     z-index: 2;
 }
@@ -1278,7 +1260,7 @@ textarea:focus {
 
 
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 .ptb-0 { padding: 0 }
 .ptb-10 { padding: 10px 0 }
@@ -1317,7 +1299,7 @@ textarea:focus {
 .plr-150 { padding: 0 150px }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .mtb-0 { margin: 0 }
 .mtb-10 { margin: 10px 0 }
@@ -1359,7 +1341,7 @@ textarea:focus {
 
 
 @media (min-width: 992px) and (max-width: 1169px) {
-  
+
 /**! 13. Basic margin padding **/
 .md-m-0 {
     margin-top: 0;
@@ -1537,7 +1519,7 @@ textarea:focus {
 
 
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 .md-ptb-0 { padding: 0 }
 .md-ptb-10 { padding: 10px 0 }
@@ -1576,7 +1558,7 @@ textarea:focus {
 .md-plr-150 { padding: 0 150px }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .md-mtb-0 { margin: 0 }
 .md-mtb-10 { margin: 10px 0 }
@@ -1618,7 +1600,7 @@ textarea:focus {
 
 
 @media (min-width: 768px) and (max-width: 991px) {
-  
+
 /**! 13. Basic margin padding **/
 .sm-m-0 {
     margin-top: 0;
@@ -1796,7 +1778,7 @@ textarea:focus {
 
 
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 .sm-ptb-0 { padding: 0 }
 .sm-ptb-10 { padding: 10px 0 }
@@ -1835,7 +1817,7 @@ textarea:focus {
 .sm-plr-150 { padding: 0 150px }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .sm-mtb-0 { margin: 0 }
 .sm-mtb-10 { margin: 10px 0 }
@@ -2054,7 +2036,7 @@ textarea:focus {
 
 
 /***************************
-    Page section padding 
+    Page section padding
 ****************************/
 .xs-ptb-0 { padding: 0 }
 .xs-ptb-10 { padding: 10px 0 }
@@ -2093,7 +2075,7 @@ textarea:focus {
 .xs-plr-150 { padding: 0 150px }
 
 /***************************
-    Page section margin 
+    Page section margin
 ****************************/
 .xs-mtb-0 { margin: 0 }
 .xs-mtb-10 { margin: 10px 0 }

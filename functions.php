@@ -211,7 +211,7 @@ function civitas_scripts() {
   // // wp_enqueue_style('animate', get_template_directory_uri() . '/assets/css/shortcode/shortcodes.css');
   // wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/style.css');
 	wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/css/main.css');
-  wp_enqueue_style('responsive', get_template_directory_uri() . '/assets/css/responsive.css');
+  // wp_enqueue_style('responsive', get_template_directory_uri() . '/assets/css/responsive.css');
   wp_enqueue_style('custom-style', get_template_directory_uri() . '/assets/css/custom.css');
 
 	if ( is_rtl() ) {

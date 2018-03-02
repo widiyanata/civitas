@@ -2581,8 +2581,8 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
 
     body.side-right > .wrapper{
-        margin-left: 280px;
-        margin-right: -280px !important;
+        margin-left: 240px;
+        margin-right: -240px !important;
     }
 
     nav.navbar.bootsnav.navbar-mobile .navbar-collapse{
@@ -2592,9 +2592,9 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
         display: block;
         background: #fff;
         z-index: 99;
-        width: 280px;
+        width: 240px;
         height: 100% !important;
-        left: -280px;
+        left: -240px;
         top: 0;
         padding: 0;
         -webkit-transition: all 0.3s ease-in-out;
@@ -2609,7 +2609,8 @@ body.on-side .wrap-sticky nav.navbar.bootsnav.sticked{
     }
 
     nav.navbar.bootsnav.navbar-mobile ul.nav{
-        width: 293px;
+        /* width: 293px; */
+        width: 100%;
         padding-right: 0;
         padding-left: 15px;
     }

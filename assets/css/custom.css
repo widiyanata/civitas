@@ -15,6 +15,10 @@ img {
   max-width: 100%;
 }
 
+.screen-reader-text {
+  display: none;
+}
+
 
 /* display none category button*/
 .cat-btn {
