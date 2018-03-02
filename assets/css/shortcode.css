@@ -20,13 +20,12 @@ Please do not change anything here! write in a custom.css file if required!
 [  Table of contents  ]
 
 
- 1. Reset
- 2. Helper Classes
- 3. Typography
- 4. Typography Helpers
- 5. Position
- 6. Transtion
- 7. Image
+ 1. Helper Classes
+ 2. Typography
+ 3. Typography Helpers
+ 4. Position
+ 5. Transtion
+ 6. Image
  7. Colors
  8. Background variation
  9. Background overlay
@@ -44,21 +43,6 @@ Basic margin padding
 [ End table content ]
 ======================================*/
 
-
-/**! 1. Reset **/
-*,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-a {
-  margin: 0;
-  padding: 0;
-}
 
 /**! 2. Helper Classes **/
 .fix {
