@@ -4,6 +4,12 @@
 /*
 * Common
 */
+.widget {
+  margin-bottom: 20px;
+}
+.widget ul {
+  list-style: none;
+}
 .widget-title {
     font-size: 1.5em;
     text-transform: uppercase;
