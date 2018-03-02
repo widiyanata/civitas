@@ -687,3 +687,76 @@
 .post-lay-c.single-post .post-content p {
     line-height: 1.5rem;
 }
+
+
+/*--------------------------------------------------------------
+## Post Single
+--------------------------------------------------------------*/
+
+/* Post navigation */
+.nav-previous, .nav-next {
+    padding: 10px 0;
+		margin-bottom: 20px;
+}
+
+.nav-previous {
+    border-left: 5px solid #f0442c;
+		padding-left: 10px;
+}
+
+.nav-next {
+    border-right: 5px solid #303030;
+    padding-right: 10px;
+}
+
+/*--------------------------------------------------------------
+## Post Archive
+--------------------------------------------------------------*/
+
+.post h1,.post h2,.post h3,.post h4,.post h5,.post h6,
+.hentry h1,.hentry h2,.hentry h3,.hentry h4,.hentry h5,.hentry h6,
+.course-lesson-description h1, .course-lesson-description h2, .course-lesson-description h3,
+.course-lesson-description h4, .course-lesson-description h5, .course-lesson-description h6 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.entry-content {
+  margin-bottom: 20px;
+}
+.entry-content p {
+  text-align: justify;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.entry-content ul {
+  padding-left: 20px;
+}
+
+footer.entry-footer {
+    padding: 5px 0;
+    border-top: 1px solid #eee;
+    margin-top: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+footer.entry-footer > span {
+    display: inline-block;
+    padding: 5px 0;
+    border-left: 1px solid #eee;
+    padding-left: 10px;
+}
+
+.entry-footer span a {
+    color: #f0442c;
+    font-weight: bold;
+    padding: 7px;
+}
+
+.post ul, .hentry ul, .course-lesson-description ul {
+  list-style: inside;
+}
+
+.post, .hentry {
+  padding-bottom: 20px;
+}
