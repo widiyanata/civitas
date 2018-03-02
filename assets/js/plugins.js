@@ -632,7 +632,8 @@ a.fn.datepicker.DPGlobal=r,a.fn.datepicker.noConflict=function(){return a.fn.dat
     }
 })(jQuery);
 
-$('section .columns').theiaStickySidebar();
+// $('section .columns').theiaStickySidebar();
+$('.columns').theiaStickySidebar();
 
 
 /*-------------------------------------------------------------
