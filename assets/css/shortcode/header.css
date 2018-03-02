@@ -73,7 +73,7 @@ nav.secondary-menu ul li:last-child {
 /*Header middle*/
 .header-middle-area {
   background-color: #f5f5f5;
-  box-shadow: inset 0px 10px 10px #eee;
+  box-shadow: inset 0px 5px 15px #eee;
 }
 .header-mdh{
     height: 150px;
