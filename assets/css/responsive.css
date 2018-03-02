@@ -119,7 +119,7 @@
   padding-right: 0;
 }
 .widget {
-    min-height: 265px;
+    /* min-height: 265px; */
 }
 .widget.pr-50.pl-20 {
     padding-left: 0;

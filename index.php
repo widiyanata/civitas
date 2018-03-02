@@ -14,12 +14,15 @@
 
 get_header();
 
-// $trending =
+$trending = get_theme_mod('trending_post_option');
+
  ?>
 
 <!-- Get Trending Post , after breaking news.  -->
-<?php get_template_part('section-templates/trending', '') ?>
-
+<?php if ( $trending ) {
+  get_template_part('section-templates/trending', '') ;
+}
+?>
 <!-- Before post widget area -->
 <?php if ( is_active_sidebar( 'widget-before-post' ) ) : ?>
     <div id="before-post-widget" class="widget-area bg-gray border-bottom" role="complementary">

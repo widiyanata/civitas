@@ -135,14 +135,6 @@
         <?php endif; ?>
         <nav class="nav navbar navbar-default <?php echo $logo_position; ?> <?php echo $sticky_class; ?> navbar-mobile bootsnav">
 
-            <!-- Start Top Search -->
-            <div class="top-search ">
-                <div class="container">
-                    <?php get_search_form(); ?>
-                </div>
-            </div>
-            <!-- End Top Search -->
-
             <div class="container">
               <?php if ( $logo_position == '' ) : ?>
                 <!-- Start Atribute Navigation -->
@@ -192,11 +184,18 @@
 
             </div>
 
+            <!-- Start Top Search -->
+            <div class="top-search ">
+                <div class="container">
+                    <?php get_search_form(); ?>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
         </nav>
-        <?php
-        # Show middle header area
-        if ( $middle_header ) : ?>
-        <div class="header-middle-area">
+
+        <!-- Middle Header -->
+        <div class="header-middle-area <?php if ( $middle_header ) { echo "";} else { echo "hidden"; } ?>">
           <div class="container">
             <div class="row">
               <div class="col-md-4 col-lg-4 col-sm-5 col-xs-12 header-mdh">
@@ -250,7 +249,7 @@
             </div>
           </div>
         </div>
-        <?php endif; ?>
+
         <?php
         # Display breaking news area
         if ( $bn ) : ?>

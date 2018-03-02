@@ -269,10 +269,10 @@ Wd_Civitas::add_section( 'trending_posts', array(
 ) );
 
 	/**
-	*	Middle Header Options Fields
+	*	Trending Posts Options Fields
 	*/
 
-	# Show Middle Header?
+	# Show Trending Posts?
 	Wd_Civitas::add_field( 'civitas', array(
 		'type'        => 'toggle',
 		'settings'    => 'trending_post_option',
